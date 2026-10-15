@@ -130,7 +130,7 @@ test('bundled official bank survives an older installation without fabricated st
   await page.goto('http://localhost:5173');
   await expect(page.getByRole('heading',{name:/Pedro/})).toBeVisible();
   const initial=await page.evaluate(async()=>{const path='/src/storage.ts';return(await import(path)).loadState().state;});
-  expect(initial.questions.filter((q:any)=>!q.isDemo)).toHaveLength(78);
+  expect(initial.questions.filter((q:any)=>!q.isDemo)).toHaveLength(315);
   expect(initial.sessions).toHaveLength(0);
   // Simulate an earlier installation containing one real item with a favorite.
   await page.evaluate((s)=>{
@@ -140,28 +140,28 @@ test('bundled official bank survives an older installation without fabricated st
     localStorage.setItem('prumo.study.v1',JSON.stringify(s));
   },initial);
   await page.reload();await nav(page,'Questões');
-  await expect(page.getByText('78 questões no banco real.',{exact:true})).toBeVisible();
+  await expect(page.getByText('315 questões no banco real.',{exact:true})).toBeVisible();
   const migrated=await persisted(page);
-  expect(migrated.questions.filter((q:any)=>!q.isDemo)).toHaveLength(78);
+  expect(migrated.questions.filter((q:any)=>!q.isDemo)).toHaveLength(315);
   expect(migrated.questions.find((q:any)=>!q.isDemo).favorite).toBe(true);
   expect(migrated.sessions).toHaveLength(0);expect(migrated.reviews).toHaveLength(0);
   await page.getByRole('button',{name:'Consultar fontes do pacote oficial'}).click();
-  await expect(page.getByText('39 de 205 tópicos',{exact:true})).toBeVisible();
-  await expect(page.getByText('11 de 13 disciplinas',{exact:true})).toBeVisible();
-  await expect(page.getByText(/As 78 questões deste pacote já estão presentes/)).toBeVisible();
+  await expect(page.getByText('94 de 205 tópicos',{exact:true})).toBeVisible();
+  await expect(page.getByText('13 de 13 disciplinas',{exact:true})).toBeVisible();
+  await expect(page.getByText(/As 315 questões deste pacote já estão presentes/)).toBeVisible();
   await page.getByText('Conferir provas, fontes e gabaritos',{exact:true}).click();
-  expect(await page.getByRole('link',{name:'Abrir cópia PDF conferida',exact:true}).count()).toBe(11);
+  expect(await page.getByRole('link',{name:'Abrir cópia PDF conferida',exact:true}).count()).toBe(15);
   const pdf=await page.request.get(await page.getByRole('link',{name:'Abrir cópia PDF conferida',exact:true}).first().getAttribute('href')||'');
   expect(pdf.ok()).toBe(true);expect((await pdf.body()).subarray(0,5).toString()).toBe('%PDF-');
   const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Baixar pacote JSON'}).click();
   const downloaded=JSON.parse((await readFile((await(await downloadPromise).path())!)).toString());
-  expect(downloaded.questions).toHaveLength(78);expect(downloaded.questions.every((q:any)=>q.origin==='official'&&!q.isDemo)).toBe(true);
+  expect(downloaded.questions).toHaveLength(315);expect(downloaded.questions.every((q:any)=>q.origin==='official'&&!q.isDemo)).toBe(true);
 });
 
 test('official Java item preserves code and assertion on mobile, scores and schedules review',async({page})=>{
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
   await page.setViewportSize({width:390,height:844});await page.goto('http://localhost:5173');await nav(page,'Questões');
-  await page.getByLabel('Pesquisar no banco').fill('System.out.println');
+  await page.getByLabel('Pesquisar no banco').fill('int resultado = fun(3)');
   await expect(page.locator('.question-card')).toHaveCount(1);
   const text=await page.locator('.question-card .question-statement-body').innerText();
   expect(text.indexOf('public class Main')).toBeLessThan(text.indexOf('Ao ser executado'));
@@ -176,12 +176,12 @@ test('official Java item preserves code and assertion on mobile, scores and sche
   expect(s.reviews.some((r:any)=>r.questionId==='cebraspe-bcb-2024-002-094')).toBe(true);
   const stats=await page.evaluate(async()=>{const modulePath='/src/core.ts';return(await import(modulePath)).calculateStats(JSON.parse(localStorage.getItem('prumo.study.v1')!));});
   expect(stats.attempts).toBe(1);expect(stats.unique).toBe(1);expect(stats.wrong).toBe(1);expect(stats.net).toBe(-2);expect(stats.netRate).toBe(-1);
-  await page.reload();const reloaded=await persisted(page);expect(reloaded.sessions[0].attempts).toHaveLength(1);expect(reloaded.questions.filter((q:any)=>!q.isDemo)).toHaveLength(78);
+  await page.reload();const reloaded=await persisted(page);expect(reloaded.sessions[0].attempts).toHaveLength(1);expect(reloaded.questions.filter((q:any)=>!q.isDemo)).toHaveLength(315);
   expect(errors).toEqual([]);
 });
 
 test('official battery exposes only the linked PDF page and withholds bank keys until completion',async({page})=>{
-  await page.goto('http://localhost:5173');await nav(page,'Questões');await page.getByLabel('Pesquisar no banco').fill('System.out.println');
+  await page.goto('http://localhost:5173');await nav(page,'Questões');await page.getByLabel('Pesquisar no banco').fill('int resultado = fun(3)');
   await page.locator('.study-toolbar select').selectOption('battery');
   await page.locator('.question-card').getByRole('button',{name:'Resolver',exact:true}).click();
   const original=page.locator('.session-runner .original-document');await original.locator('summary').click();
@@ -198,4 +198,41 @@ test('official battery exposes only the linked PDF page and withholds bank keys 
   await expect(page.getByRole('heading',{name:'Sua sessão, em perspectiva'})).toBeVisible();
   await page.getByRole('button',{name:'Voltar ao plano'}).click();await nav(page,'Questões');
   await expect(page.getByRole('button',{name:'Consultar fontes do pacote oficial'})).toBeEnabled();
+});
+
+test('recent catalog preserves visual evidence, source limits and mobile study persistence',async({page})=>{
+  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
+  await page.setViewportSize({width:390,height:844});await page.goto('http://localhost:5173');await nav(page,'Questões');
+  await expect(page.locator('.question-card').first().locator('.question-meta')).toContainText('2026');
+  await page.getByLabel('Pesquisar no banco').fill('SELECT a+10 FROM TABELA');
+  await expect(page.locator('.question-card')).toHaveCount(1);
+  await expect(page.locator('.question-card .question-meta')).toContainText('2025');
+  await expect(page.locator('.question-card .question-evidence')).toContainText('PDF definitivo ainda não conferido');
+  await page.locator('.question-card').getByRole('button',{name:'Resolver',exact:true}).click();
+  await expect(page.locator('.session-runner pre')).toContainText('INSERT INTO TABELA VALUES (null)');
+  await page.locator('.original-question-pages summary').click();
+  const original=page.locator('.original-question-pages img').first();await expect(original).toBeVisible();
+  await expect.poll(()=>original.evaluate((img:HTMLImageElement)=>img.naturalWidth)).toBeGreaterThan(1000);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await answer(page,0);await expect(page.locator('.runner-feedback')).toContainText('Errado');
+  await expect(page.getByRole('link',{name:'Transcrição pública identificada',exact:true})).toHaveAttribute('href',/github.com\/aureovinicius\/concursos-cgu\/blob\/a14f358/);
+  await page.getByRole('button',{name:'Concluir e corrigir sessão'}).click();
+  const before=await persisted(page);expect(before.sessions[0].attempts).toHaveLength(1);expect(before.reviews).toHaveLength(1);
+  const solved=before.questions.find((q:any)=>q.id===before.sessions[0].questionIds[0]);expect(solved.keyVerification).toBe('public-transcription');expect(solved.originalPages).toHaveLength(4);
+  await page.reload();const after=await persisted(page);expect(after.sessions).toEqual(before.sessions);expect(after.reviews).toEqual(before.reviews);
+  expect(errors).toEqual([]);
+});
+
+test('expanded bank can start 170 distinct items with official block counts and no fabricated answers',async({page})=>{
+  await page.goto('http://localhost:5173');await nav(page,'Simulados');
+  await page.getByLabel(/^Formato/).selectOption('official');
+  await page.getByRole('button',{name:'Iniciar simulado na estrutura oficial',exact:true}).click();
+  await expect(page.locator('.session-runner')).toBeVisible();
+  const state=await persisted(page);const session=state.sessions[0];
+  expect(session.questionIds).toHaveLength(170);expect(new Set(session.questionIds).size).toBe(170);expect(session.durationMinutes).toBe(300);
+  for(const [id,count]of [['p1',40],['p2',40],['p3',90]]as const)expect(session.questionIds.filter((qid:string)=>state.questions.find((q:any)=>q.id===qid)?.block===id)).toHaveLength(count);
+  expect(session.attempts.filter((attempt:any)=>attempt.submitted)).toHaveLength(0);
+  await expect(page.locator('.runner-feedback')).toHaveCount(0);
+  const stats=await page.evaluate(async()=>{const path='/src/core.ts';return(await import(path)).calculateStats(JSON.parse(localStorage.getItem('prumo.study.v1')!));});
+  expect(stats.attempts).toBe(0);expect(stats.precision).toBeNull();expect(stats.netRate).toBeNull();
 });

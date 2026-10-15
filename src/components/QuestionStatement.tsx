@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import type { Question } from '../types';
 import type { CSSProperties } from 'react';
 
 export type StatementPart = { kind: 'text'; text: string } | { kind: 'code'; text: string; language?: string };
@@ -40,11 +42,34 @@ export function HighlightedCode({ code, language }: { code: string; language?: s
   </div>;
 }
 
-export default function QuestionStatement({ statement, code, language, className = '' }: { statement: string; code?: string; language?: string; className?: string }) {
+function QuestionEvidence({ question }: { question: Question }) {
+  const [open, setOpen] = useState(false);
+  const hasPages = Boolean(question.originalPages?.length);
+  return <>
+    {question.keyVerification && <div className="question-evidence" style={{ padding: '12px 14px', border: '1px solid var(--border)', borderRadius: 8, margin: '14px 0', fontSize: 12, overflowWrap: 'anywhere' }}>
+      <strong>{question.keyVerification === 'pdf-checked' ? 'Gabarito confrontado com o PDF definitivo.' : question.keyVerification === 'user-recorded' ? 'Gabarito retificado localmente; confira a referência registrada nesta versão.' : 'Gabarito de transcrição pública identificada; PDF definitivo ainda não conferido nesta importação.'}</strong>
+      <p style={{ margin: '6px 0' }}>Prova de {question.year} · Fonte consultada em {question.sourceVerifiedAt?.slice(0, 10).split('-').reverse().join('/') || 'data não informada'}.
+        {question.yearBasis === 'catalog-application' && ' Ano de aplicação informado no catálogo público.'}</p>
+      <p style={{ margin: '6px 0' }}>{question.contentCurrentness === 'historical-statistic' ? 'O indicador mantém o período original citado na questão; não representa uma estatística atual.' : question.contentCurrentness === 'version-specific' ? 'Resolva considerando a versão explicitada no item. Outras versões podem ter comportamento diferente.' : 'A data da prova não comprova vigência atual de normas ou versões de tecnologias; preserve o contexto do item.'}</p>
+      {question.sourceVerification && <details><summary>Escopo da conferência</summary><p>{question.sourceVerification}</p></details>}
+    </div>}
+    {hasPages && <details className="original-question-pages" onToggle={event => setOpen(event.currentTarget.open)} style={{ margin: '16px 0', maxWidth: '100%' }}>
+      <summary>Conferir enunciado original · item {question.itemNumber} · {question.originalPages!.length} página(s)</summary>
+      <p className="muted small">A transcrição é auxiliar. Leia o comando e o item indicado na reprodução original; as páginas de apoio preservam situações, tabelas, imagens e códigos. Abra a imagem para ampliar.</p>
+      {open && question.originalPages!.map(page => <figure key={page.assetUrl} style={{ margin: '12px 0' }}>
+        <figcaption>Página {page.page}{page.support ? ' · contexto de apoio' : ` · localize o item ${question.itemNumber}`}</figcaption>
+        <a href={page.assetUrl} target="_blank" rel="noreferrer" aria-label={`Ampliar página ${page.page} do item ${question.itemNumber}`}><img src={page.assetUrl} alt={`Reprodução da página ${page.page} da prova Cebraspe; responda ao item ${question.itemNumber}`} loading="lazy" style={{ width: '100%', height: 'auto', border: '1px solid var(--border)' }}/></a>
+      </figure>)}
+    </details>}
+  </>;
+}
+
+export default function QuestionStatement({ statement, code, language, className = '', question }: { statement: string; code?: string; language?: string; className?: string; question?: Question }) {
   return <div className={`question-statement-body ${className}`.trim()}>
     {parseQuestionStatement(statement).map((part, index) => part.kind === 'code'
       ? <HighlightedCode key={index} code={part.text} language={part.language || language}/>
       : <p key={index} className="question-statement" style={{ whiteSpace: 'pre-wrap', overflowWrap: 'anywhere' }}>{part.text}</p>)}
     {code !== undefined && code !== '' && <HighlightedCode code={code} language={language}/>}
+    {question && <QuestionEvidence question={question}/>}
   </div>;
 }

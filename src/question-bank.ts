@@ -1,3 +1,4 @@
+import { validQuestionEvidence } from './question-evidence';
 import type { AppState, ExamRules, Explanation, Question, SourceRecord, Topic } from './types';
 
 /** A package contains source material only, never a student's study history. */
@@ -32,16 +33,67 @@ const publicUrl = (value: unknown): value is string => {
   catch { return false; }
 };
 
+const boardIdentity = (board: string) => ['cebraspe', 'cespe', 'cespe/cebraspe', 'cespe/unb'].includes(normalize(board)) ? 'cebraspe' : normalize(board);
+const itemIdentity = (value: string) => normalize(value).replace(/^0+(?=\d+$)/, '');
+function canonicalUrl(value: string) {
+  try {
+    const url = new URL(value); url.hash = '';
+    for (const key of [...url.searchParams.keys()]) if (/^(utm_.+|fbclid|gclid)$/i.test(key)) url.searchParams.delete(key);
+    url.searchParams.sort();
+    return url.href;
+  } catch { return value.split('#')[0]; }
+}
+
+/** Retain multiple independent identifiers: exam labels can change between packages. */
+function originalEvidence(question: Question): string[] {
+  const scope = `${boardIdentity(question.board)}|${question.year}`;
+  if (!question.itemNumber?.trim()) return [`text|${scope}|${normalize(question.examId ?? '')}|${canonicalUrl(question.sourceUrl ?? '')}|${normalize(question.statement)}|${question.code ?? ''}`];
+  const item = itemIdentity(question.itemNumber), keys: string[] = [];
+  if (question.examId?.trim()) keys.push(`exam|${scope}|${normalize(question.examId)}|${item}`);
+  // A contest landing page may cover several cadernos; its URL is not an item identity.
+  if (question.sourceUrl) {
+    const url = canonicalUrl(question.sourceUrl);
+    if (/\.pdf$/i.test(new URL(url).pathname)) keys.push(`document|${scope}|${url}|${item}`);
+  }
+  if (question.pdfAssetUrl) keys.push(`asset|${scope}|${question.pdfAssetUrl}|${item}`);
+  const sha256 = (question as unknown as Record<string, unknown>).proofSha256;
+  if (typeof sha256 === 'string' && /^[a-f0-9]{64}$/i.test(sha256)) keys.push(`sha256|${scope}|${sha256.toLowerCase()}|${item}`);
+  // A non-document URL can still identify a manually imported item with no exam label.
+  if (!keys.length) keys.push(`unlabelled|${scope}|${canonicalUrl(question.sourceUrl ?? '')}|${item}|${normalize(question.statement)}|${question.code ?? ''}`);
+  return keys;
+}
+
+type QuestionIndex = Map<string, Set<Question>>;
+function indexQuestion(index: QuestionIndex, evidence: Question, target = evidence) {
+  for (const key of originalEvidence(evidence)) {
+    const matches = index.get(key) ?? new Set<Question>(); matches.add(target); index.set(key, matches);
+  }
+}
+function findQuestions(index: QuestionIndex, byId: Map<string, Question>, question: Question): Question[] {
+  const matches = new Set<Question>();
+  const idMatch = byId.get(question.id); if (idMatch) matches.add(idMatch);
+  for (const key of originalEvidence(question)) for (const match of index.get(key) ?? []) matches.add(match);
+  return [...matches];
+}
+function shareOriginalEvidence(a: Question, b: Question) {
+  const keys = new Set(originalEvidence(a)); return originalEvidence(b).some(key => keys.has(key));
+}
+function sameSource(a: SourceRecord, b: SourceRecord) {
+  const signature = (source: SourceRecord) => JSON.stringify(Object.entries(source).sort(([aKey], [bKey]) => aKey.localeCompare(bKey)));
+  return signature(a) === signature(b);
+}
+
 /** Independent of the local id so reinstalling an exam cannot inflate the bank. */
 export function officialQuestionIdentity(question: Question): string {
-  if (question.examId && question.itemNumber) return `${question.year}|${normalize(question.examId)}|${normalize(question.itemNumber)}`;
+  if (question.examId && question.itemNumber) return `${question.year}|${normalize(question.examId)}|${itemIdentity(question.itemNumber)}`;
   // A file URL and its original item number also identify questions imported manually.
-  if (question.sourceUrl && question.itemNumber) return `${question.year}|${question.sourceUrl.split('#')[0]}|${normalize(question.itemNumber)}`;
+  if (question.sourceUrl && question.itemNumber) return `${question.year}|${canonicalUrl(question.sourceUrl)}|${itemIdentity(question.itemNumber)}`;
   return `${question.year}|${question.sourceUrl ?? ''}|${normalize(question.statement)}|${question.code ?? ''}`;
 }
 
 function sameOriginal(a: Question, b: Question) {
-  return a.statement === b.statement && (a.code ?? '') === (b.code ?? '') && a.answer === b.answer && a.keyStatus === b.keyStatus && a.keyVersion === b.keyVersion;
+  return a.statement === b.statement && (a.code ?? '') === (b.code ?? '') && a.answer === b.answer && a.keyStatus === b.keyStatus && a.keyVersion === b.keyVersion
+    && a.topicId === b.topicId && a.discipline === b.discipline && a.topic === b.topic && a.block === b.block && boardIdentity(a.board) === boardIdentity(b.board);
 }
 
 /** Fail closed: a partially invalid package cannot be installed as a verified bank. */
@@ -53,16 +105,21 @@ export function validateQuestionBank(input: unknown, stateTopics: Topic[], state
   if (!Array.isArray(input.questions) || !input.questions.length || input.questions.length > 10000) errors.push('O pacote deve conter entre 1 e 10.000 questões verificáveis.');
   if (input.sources !== undefined && !Array.isArray(input.sources)) errors.push('A lista de fontes é inválida.');
   const sources: SourceRecord[] = [];
-  const sourceIds = new Set<string>();
+  const sourceIds = new Map<string, SourceRecord>();
   if (Array.isArray(input.sources)) for (const [index, source] of input.sources.entries()) {
     if (!record(source) || !text(source.id) || !text(source.title) || !publicUrl(source.url) || !date(source.consultedAt) || !['verified', 'uploaded', 'unavailable'].includes(String(source.status)) || !text(source.detail)
       || ['fileName', 'extractedText', 'documentId'].some(key => source[key] !== undefined && typeof source[key] !== 'string')
       || (source.assetUrl !== undefined && (typeof source.assetUrl !== 'string' || !/^\/documents\/[a-zA-Z0-9._-]+\.pdf$/.test(source.assetUrl)))) {
       errors.push(`Fonte ${index + 1}: identificação, URL, data ou documentação inválida.`);
-    } else if (sourceIds.has(source.id)) errors.push(`Fonte duplicada: ${source.id}.`);
-    else { sourceIds.add(source.id); sources.push({ ...source } as unknown as SourceRecord); }
+    } else {
+      const candidate = { ...source } as unknown as SourceRecord;
+      const previous = sourceIds.get(source.id);
+      if (previous && !sameSource(previous, candidate)) errors.push(`Fonte duplicada conflitante: ${source.id}.`);
+      else if (previous) warnings.push(`Fonte idêntica repetida ignorada: ${source.id}.`);
+      else { sourceIds.set(source.id, candidate); sources.push(candidate); }
+    }
   }
-  const questions: Question[] = [], byId = new Map<string, Question>(), byOriginal = new Map<string, Question>();
+  const questions: Question[] = [], byId = new Map<string, Question>(), byOriginal: QuestionIndex = new Map();
   const topics = new Map(stateTopics.map(topic => [topic.id, topic]));
   const blocks = new Set(stateRules.blocks.map(block => block.id));
   if (Array.isArray(input.questions)) for (const [index, raw] of input.questions.entries()) {
@@ -81,6 +138,7 @@ export function validateQuestionBank(input: unknown, stateTopics: Topic[], state
     else if (raw.discipline !== topic.discipline || raw.topic !== topic.name || raw.block !== topic.block || !blocks.has(String(raw.block))) errors.push(`${prefix}: disciplina, assunto e bloco devem corresponder ao item do edital.`);
     for (const field of ['code', 'language', 'subtopic', 'examId', 'itemNumber', 'difficulty', 'difficultyCriterion', 'pdfDocumentId']) if (raw[field] !== undefined && typeof raw[field] !== 'string') errors.push(`${prefix}: ${field} deve ser texto.`);
     if (raw.pdfAssetUrl !== undefined && (typeof raw.pdfAssetUrl !== 'string' || !/^\/documents\/[a-zA-Z0-9._-]+\.pdf$/.test(raw.pdfAssetUrl))) errors.push(`${prefix}: o PDF deve ser um documento local válido da plataforma.`);
+    if (!validQuestionEvidence(raw)) errors.push(`${prefix}: páginas originais ou metadados de conferência inválidos.`);
     if (raw.pdfPage !== undefined && (!Number.isInteger(raw.pdfPage) || Number(raw.pdfPage) < 1)) errors.push(`${prefix}: página do PDF inválida.`);
     if (raw.difficulty && !text(raw.difficultyCriterion)) errors.push(`${prefix}: dificuldade exige um critério documentado.`);
     if (!answer(raw.answer) || !statuses.includes(String(raw.keyStatus)) || !Number.isInteger(raw.keyVersion) || Number(raw.keyVersion) < 1
@@ -111,14 +169,19 @@ export function validateQuestionBank(input: unknown, stateTopics: Topic[], state
     if (errors.length !== previousErrors) continue;
     // All optional document provenance is carried through for source inspection.
     const question = { ...raw, explanation } as unknown as Question;
-    const identity = officialQuestionIdentity(question);
-    const duplicate = byId.get(question.id) ?? byOriginal.get(identity);
+    const matches = findQuestions(byOriginal, byId, question);
+    if (matches.length > 1) { errors.push(`${prefix}: identificadores ambíguos apontam para itens diferentes (${matches.map(match => match.id).join(', ')}).`); continue; }
+    const duplicate = matches[0];
     if (duplicate) {
-      if (!sameOriginal(duplicate, question)) errors.push(`${prefix}: duplicata conflitante de ${duplicate.id}.`);
-      else warnings.push(`${prefix}: duplicata ignorada (${duplicate.id}).`);
+      if (!shareOriginalEvidence(duplicate, question) || !sameOriginal(duplicate, question)) errors.push(`${prefix}: duplicata conflitante de ${duplicate.id}.`);
+      else {
+        warnings.push(`${prefix}: duplicata ignorada (${duplicate.id}).`);
+        // Keep aliases from the duplicate so later rows cannot reintroduce it.
+        byId.set(question.id, duplicate); indexQuestion(byOriginal, question, duplicate);
+      }
       continue;
     }
-    byId.set(question.id, question); byOriginal.set(identity, question); questions.push(question);
+    byId.set(question.id, question); indexQuestion(byOriginal, question); questions.push(question);
   }
   if (errors.length) return { bank: null, errors, warnings };
   return { bank: { ...input, questions, ...(input.sources !== undefined ? { sources } : {}) } as unknown as QuestionBank, errors, warnings };
@@ -131,20 +194,32 @@ export function mergeQuestionBank(state: AppState, bank: QuestionBank): { state:
   const additions: Question[] = [], conflicts: string[] = [];
   let existing = 0;
   const byId = new Map(state.questions.map(question => [question.id, question]));
-  const byOriginal = new Map(state.questions.filter(question => !question.isDemo).map(question => [officialQuestionIdentity(question), question]));
+  const byOriginal: QuestionIndex = new Map();
+  for (const question of state.questions) if (!question.isDemo) indexQuestion(byOriginal, question);
   for (const question of checked.bank.questions) {
-    const original = byId.get(question.id) ?? byOriginal.get(officialQuestionIdentity(question));
-    // Imported manually: match the official document/item as a second identity.
-    const match = original ?? state.questions.find(q => !q.isDemo && q.sourceUrl === question.sourceUrl && q.itemNumber && q.itemNumber === question.itemNumber && q.year === question.year);
+    const matches = findQuestions(byOriginal, byId, question);
+    if (matches.length > 1) {
+      existing++;
+      conflicts.push(`${question.id}: identificadores ambíguos apontam para ${matches.map(match => match.id).join(', ')}. Os itens existentes e seu histórico foram preservados; confira o caderno e o número antes de unificar.`);
+      continue;
+    }
+    const match = matches[0];
     if (match) {
       existing++;
-      if (!sameOriginal(match, question) || match.isDemo) conflicts.push(`${question.id}: o item existente ${match.id} foi preservado integralmente, inclusive seu gabarito v${match.keyVersion}. Confira qualquer divergência em Alterar gabarito.`);
+      if (!shareOriginalEvidence(match, question) || !sameOriginal(match, question) || match.isDemo) conflicts.push(`${question.id}: o item existente ${match.id} foi preservado integralmente, inclusive seu gabarito v${match.keyVersion}. Confira identificadores, classificação e qualquer divergência em Alterar gabarito.`);
+      else { byId.set(question.id, match); indexQuestion(byOriginal, question, match); }
       continue;
     }
     const addition = structuredClone(question);
-    additions.push(addition); byId.set(addition.id, addition); byOriginal.set(officialQuestionIdentity(addition), addition);
+    additions.push(addition); byId.set(addition.id, addition); indexQuestion(byOriginal, addition);
   }
-  const sourceAdditions = (checked.bank.sources ?? []).filter(source => !state.sources.some(existingSource => existingSource.id === source.id));
+  const currentSources = new Map(state.sources.map(source => [source.id, source]));
+  const sourceAdditions: SourceRecord[] = [];
+  for (const source of checked.bank.sources ?? []) {
+    const current = currentSources.get(source.id);
+    if (!current) { sourceAdditions.push(source); currentSources.set(source.id, source); }
+    else if (!sameSource(current, source)) conflicts.push(`Fonte ${source.id}: a documentação existente foi preservada; o pacote contém metadados diferentes para o mesmo identificador.`);
+  }
   if (!additions.length && !sourceAdditions.length) return { state, added: 0, existing, conflicts };
   return { state: { ...state, questions: [...state.questions, ...additions], sources: [...state.sources, ...structuredClone(sourceAdditions)] }, added: additions.length, existing, conflicts };
 }

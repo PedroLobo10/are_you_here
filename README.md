@@ -36,20 +36,39 @@ A base oficial é adicionada automaticamente em instalações novas e existentes
 
 ## Base oficial incluída
 
-São **78 questões de provas anteriores do Cebraspe/Cespe**, selecionadas por aderência ao conteúdo do edital fornecido para CGU — Desenvolvimento de Sistemas. A origem de cada questão identifica o órgão e a prova; estes itens não são apresentados como questões de uma prova da CGU.
+São **315 questões oficiais de provas anteriores Cebraspe/Cespe**, vinculadas editorialmente ao edital fornecido para CGU — Desenvolvimento de Sistemas. A versão `2026-10-15.2` acrescenta **237 itens** à base inicial de 78: **201 de aplicação em 2025, 16 de 2026 e 20 de 2024**. O ano registrado é o de aplicação, conforme a fonte indicada; o ano no identificador do edital pode ser anterior. Questões aparecem das mais recentes para as mais antigas em **Questões**.
 
-| Prova de origem | Questões selecionadas |
-|---|---:|
-| INSS 2022 — conhecimentos básicos | 16 |
-| Banco Central 2024 — conhecimentos básicos | 5 |
-| ABIN 2018 — conhecimentos gerais e área 1 | 9 |
-| Banco Central 2024 — Tecnologia da Informação | 48 |
+Há novos itens em **todas as 13 disciplinas**, distribuídos por **94 dos 205 tópicos folha**. Isso descreve disponibilidade do banco; não significa cobertura integral do conteúdo nem domínio do candidato. Auditoria tem quatro itens e Sociedade Brasileira tem nove: ambas ainda exigem ampliação de amostra. A importação não cria tentativas, notas ou revisões; a atualização adiciona itens preservando favoritos, respostas, gabaritos retificados e anotações existentes.
 
-A seleção cobre **11 das 13 disciplinas e 39 dos 205 tópicos folha**. Essa é a cobertura do banco disponível, não o domínio do candidato. Ainda faltam questões verificadas para **Fundamentos de Governança, Riscos e Integridade Pública e Privada** e **Fundamentos de Auditoria Governamental e Atuação Integrada da CGU**; há também tópicos sem questões nas disciplinas contempladas. A classificação dos itens no edital CGU é editorial, não uma classificação oficial da banca.
+| Disciplina | Total | Novas | Aplicação mais recente |
+|---|---:|---:|---:|
+| Estado, democracia, direitos e ciência política | 21 | 12 | 2026 |
+| Sociedade brasileira, desigualdades, diversidade e desenvolvimento | 9 | 8 | 2026 |
+| Ética pública e responsabilidade profissional | 10 | 6 | 2025 |
+| Administração pública e fundamentos de políticas públicas | 15 | 8 | 2026 |
+| Fundamentos de governança, riscos e integridade pública e privada | 21 | 21 | 2025 |
+| Fundamentos de transparência, ouvidoria e participação social | 17 | 14 | 2025 |
+| Fundamentos de direito público aplicado, controle e responsabilização | 16 | 10 | 2025 |
+| Fundamentos de evidências, dados e inteligência artificial | 13 | 12 | 2025 |
+| Fundamentos de auditoria governamental e atuação integrada da cgu | 4 | 4 | 2025 |
+| Engenharia de software e programação | 26 | 21 | 2025 |
+| Arquitetura e integração de sistemas | 62 | 34 | 2025 |
+| Persistência, integração e proteção de dados | 48 | 44 | 2025 |
+| Desenvolvimento seguro, qualidade e gestão da entrega | 53 | 43 | 2025 |
 
-Enunciados, números de item e gabaritos oficiais definitivos foram conferidos em PDFs originais preservados em espelhos públicos dos repositórios `kant-sdev/simucespe` e `SaganGromov/CONCURSOS_2627`. **O acesso direto ao CDN oficial do Cebraspe retornou HTTP 403**; a conferência documental das cópias públicas não confirma sua disponibilidade online atual. Os PDFs de prova, gabarito e justificativas aplicáveis estão incluídos em `public/documents/`. URLs originais, espelhos em commits identificados, data de consulta e hashes SHA-256 estão em `public/question-banks/cebraspe-cgu-ti-provenance.json`; o pacote importável está em `public/question-banks/cebraspe-cgu-ti-v1.json` e pode ser baixado em **Questões**.
+A ampliação inclui aplicações de 2025 do STM, SUSEP, FUB, TRF6, TRT10, BDMG, FUNPRESP-EXE e ANM, além do IRBr/CACD 2026. A origem e o cargo de cada item permanecem identificados. Itens de idiomas, legislação local sem aderência, conteúdos de outras especialidades, questões anuladas e múltipla escolha não convertida em C/E foram excluídos. A classificação no edital CGU é editorial, não uma classificação da banca.
 
-Nenhuma base privada ou questão autoral integra esse pacote. Comentários didáticos não validados continuam identificados separadamente do gabarito oficial.
+### Conferência e atualidade
+
+- **78 itens anteriores:** provas e gabaritos definitivos em PDF conferidos em espelhos públicos dos repositórios `kant-sdev/simucespe` e `SaganGromov/CONCURSOS_2627`.
+- **16 novos itens do IRBr/CACD 2026:** prova e gabarito definitivo confrontados nos PDFs preservados por `JSSO0/padrao-embaixador`, em commit fixo, com hashes conferidos. Aplicação em 29/03/2026; itens anulados excluídos.
+- **221 novos itens de 2024–2025:** páginas originais preservadas e gabarito de transcrição pública no catálogo `aureovinicius/concursos-cgu`, commit `a14f358db6ba778752242220c867052c54cd92a9`. São 38 imagens de páginas com SHA-256 individual. **O PDF do gabarito definitivo destes 221 itens não foi obtido nem confrontado nesta importação.** Essa limitação aparece na resolução; as chaves não foram geradas por IA.
+
+Acesso direto ao CDN oficial permanece bloqueado por HTTP 403 nesta rede. Ano recente não certifica vigência jurídica nem versão técnica atual. As datas, versões e condições do item são preservadas; uma estatística do Censo Agropecuário de 2017 permanece identificada como histórica. Não foram criados comentários didáticos nem referências automáticas como validação definitiva.
+
+O pacote completo está em `public/question-banks/cebraspe-cgu-ti-v1.json` — o caminho estável mantém compatibilidade; a versão está no conteúdo. URLs oficiais, espelhos fixados, tipos de evidência, hashes e contagens estão em `public/question-banks/cebraspe-cgu-ti-provenance.json`. Os 221 registros públicos selecionados, sem modificações de origem, estão em `public/question-banks/cebraspe-recent-catalog-selection.json`; a apresentação corrige apenas limites de extração, espaços e formatação de código, e restaura situações compartilhadas. As páginas originais são a referência para conferir comandos e elementos visuais.
+
+Consulte **Questões → Consultar fontes do pacote oficial** para distribuição, fontes e download JSON. Gabaritos de sessões com correção adiada ficam ocultos até encerrá-las. Uma retificação local preserva o histórico e recebe indicação de registro manual, sem herdar a conferência da versão anterior.
 
 ## Fonte e regras
 
@@ -89,7 +108,7 @@ O orçamento padrão é 24h semanais. A prova objetiva integral exige 5h contín
 
 Histórico e preferências ficam em `localStorage`; PDFs em IndexedDB. A origem/endereço e o navegador definem esse armazenamento. Limpar dados do navegador ou mudar de dispositivo não sincroniza o histórico. Limites de espaço geram aviso; exporte imediatamente se houver falha de salvamento.
 
-Backup completo JSON inclui dados e PDFs importados, além do edital fornecido. A restauração valida estrutura e documentos antes de substituir dados; exclusão exige confirmação escrita. JSON sem PDFs e CSV do histórico também estão disponíveis. Em recuperação de dados corrompidos, o armazenamento original é preservado para exportação.
+Backup completo JSON inclui dados e PDFs importados, além dos PDFs de fontes incorporadas. As imagens das páginas do banco acompanham os arquivos da plataforma; para restaurar em outra instalação, utilize a mesma versão atualizada do projeto. A restauração valida estrutura e documentos antes de substituir dados; exclusão exige confirmação escrita. JSON sem PDFs e CSV do histórico também estão disponíveis. Em recuperação de dados corrompidos, o armazenamento original é preservado para exportação.
 
 PDFs exigem conferência humana da ordem do texto, imagens, tabelas, código e correspondência com o gabarito. O original é guardado; o simulado mostra somente a página vinculada ao enunciado. Não vincule uma página que contenha o gabarito. Comentários importados têm autoria e validação separadas; comentários de IA não ganham validação definitiva automaticamente.
 

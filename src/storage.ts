@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import type { AppState } from './types';
 import { initialRules, initialTopics, initialQuestions, sourceRecords, officialQuestionBank } from './source-data';
 import { mergeQuestionBank } from './question-bank';
+import { validQuestionEvidence } from './question-evidence';
 
 export const STORAGE_KEY = 'prumo.study.v1';
 export function freshState(): AppState {
@@ -45,7 +46,7 @@ export function validateBackup(value:unknown): value is AppState {
     && array(s.writings) && s.writings.every(w=>object(w)&&text(w.id)&&text(w.title)&&text(w.prompt)&&text(w.response)&&text(w.rewrite)&&date(w.createdAt)&&Number.isFinite(w.minutes)&&w.minutes>=0&&typeof w.rubricVerified==='boolean'&&typeof w.isDemo==='boolean'&&array(w.criteria)&&w.criteria.every(c=>object(c)&&text(c.name)&&Number.isFinite(c.maximum)&&c.maximum>=0&&(c.score===null||Number.isFinite(c.score)&&c.score>=0&&c.score<=c.maximum)&&text(c.feedback)))
     && validRules(s.rules)
     && array(s.sources)&&s.sources.every(r=>object(r)&&text(r.id)&&text(r.title)&&url(r.url,true)&&text(r.consultedAt)&&['verified','unavailable','uploaded'].includes(r.status)&&text(r.detail)&&optionalText(r.extractedText)&&optionalText(r.fileName)&&optionalText(r.documentId)&&(r.assetUrl===undefined||/^\/documents\/[a-zA-Z0-9._-]+\.pdf$/.test(r.assetUrl)))
-    &&s.questions.every(q=>optionalText(q.code)&&optionalText(q.language)&&optionalText(q.pdfDocumentId)&&(q.pdfAssetUrl===undefined||/^\/documents\/[a-zA-Z0-9._-]+\.pdf$/.test(q.pdfAssetUrl))&&(q.pdfPage===undefined||Number.isInteger(q.pdfPage)&&q.pdfPage>0)&&optionalText(q.subtopic)&&optionalText(q.topicId)&&optionalText(q.examId)&&optionalText(q.itemNumber)&&optionalText(q.difficulty)&&optionalText(q.difficultyCriterion)&&(!q.explanation||['decisive','concept','whyWrong','rewrite','trap','summary','reference','divergence'].every(k=>optionalText(q.explanation![k as keyof typeof q.explanation]))))
+    &&s.questions.every(q=>validQuestionEvidence(q)&&optionalText(q.code)&&optionalText(q.language)&&optionalText(q.pdfDocumentId)&&(q.pdfAssetUrl===undefined||/^\/documents\/[a-zA-Z0-9._-]+\.pdf$/.test(q.pdfAssetUrl))&&(q.pdfPage===undefined||Number.isInteger(q.pdfPage)&&q.pdfPage>0)&&optionalText(q.subtopic)&&optionalText(q.topicId)&&optionalText(q.examId)&&optionalText(q.itemNumber)&&optionalText(q.difficulty)&&optionalText(q.difficultyCriterion)&&(!q.explanation||['decisive','concept','whyWrong','rewrite','trap','summary','reference','divergence'].every(k=>optionalText(q.explanation![k as keyof typeof q.explanation]))))
     &&s.sessions.every(s=>s.attempts.every(a=>(a.confidenceRecorded===undefined||typeof a.confidenceRecorded==='boolean')&&(a.diagnosticAnswer===undefined||answer(a.diagnosticAnswer))&&(a.errorType===undefined||errorTypes.includes(a.errorType))))
     &&s.writings.every(w=>(w.kind===undefined||['personal','q1','q2'].includes(w.kind))&&(w.nc===undefined||w.nc===null||Number.isFinite(w.nc))&&(w.ne===undefined||w.ne===null||Number.isFinite(w.ne))&&(w.tl===undefined||w.tl===null||Number.isFinite(w.tl))&&(w.zeroReason===undefined||['none','off-topic','no-text'].includes(w.zeroReason))&&optionalText(w.pairId)&&(w.scoringRules===undefined||validWritingRules(w.scoringRules)));
 }

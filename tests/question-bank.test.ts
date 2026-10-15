@@ -157,3 +157,38 @@ describe('additive question-bank installation', () => {
     expect(result.conflicts.length).toBeGreaterThan(0);
   });
 });
+
+describe('expansion identities and evidence safety', () => {
+  it('deduplicates aliases of the same PDF/item despite exam labels, tracking and leading zeros', () => {
+    const a=question();const b=question('alias',{examId:'other-label',itemNumber:'001',sourceUrl:a.sourceUrl+'?utm_source=test#page=3'});
+    const checked=validate(bank([a,b]));expect(checked.errors).toEqual([]);expect(checked.bank?.questions).toHaveLength(1);
+    const installed=mergeQuestionBank({...state(),questions:[a]},bank([b]));expect(installed).toMatchObject({added:0,existing:1,conflicts:[]});
+  });
+  it('does not merge distinct booklets that share a contest landing page', () => {
+    const a=question('booklet-a',{sourceUrl:'https://www.cebraspe.org.br/concursos/teste',examId:'booklet-a'});
+    const b=question('booklet-b',{sourceUrl:a.sourceUrl,examId:'booklet-b'});
+    expect(validate(bank([a,b])).bank?.questions).toHaveLength(2);
+  });
+  it('rejects ID collisions between different original items', () => {
+    const a=question();const b=question(a.id,{examId:'another-exam',itemNumber:'2',sourceUrl:'https://www.cebraspe.org.br/other.pdf'});
+    expect(validate(bank([a,b])).bank).toBeNull();
+    const installed=mergeQuestionBank({...state(),questions:[a]},bank([b]));expect(installed.added).toBe(0);expect(installed.conflicts).toHaveLength(1);expect(installed.state.questions).toEqual([a]);
+  });
+  it('keeps identical source declarations once and rejects conflicting declarations', () => {
+    const source:SourceRecord={id:'paper',title:'Fonte de teste',url:'https://www.cebraspe.org.br/test.pdf',consultedAt:date,status:'verified',detail:'Conferência de teste'};
+    const good=validate(bank([question()],{sources:[source,{...source}]}));expect(good.errors).toEqual([]);expect(good.bank?.sources).toHaveLength(1);
+    expect(validate(bank([question()],{sources:[source,{...source,detail:'Outra documentação'}]})).bank).toBeNull();
+    const installed=mergeQuestionBank({...state(),sources:[source]},bank([question()],{sources:[{...source,detail:'Nova descrição'}]}));
+    expect(installed.state.sources[0]).toEqual(source);expect(installed.conflicts.some(c=>c.includes('Fonte paper'))).toBe(true);
+  });
+  it.each([
+    {originalPages:[{assetUrl:'https://example.org/not-a-bundled-page.svg',page:1,sha256:'a'.repeat(64)}]},
+    {originalPages:[{assetUrl:'/question-pages/'+'a'.repeat(20)+'-p1.webp',page:0,sha256:'a'.repeat(64)}]},
+    {originalPages:[{assetUrl:'/question-pages/'+'a'.repeat(20)+'-p1.webp',page:1,sha256:'bad'}]},
+    {keyVerification:'automatically-guaranteed'},
+    {sourceVerifiedAt:'not-a-date'},
+    {answerKeyEvidenceUrl:'javascript:alert(1)'},
+  ])('rejects malformed evidence metadata %#',patch=>{
+    const q=question('invalid-evidence',patch as Partial<Question>);expect(validate(bank([q])).bank).toBeNull();expect(validateBackup({...state(),questions:[q]})).toBe(false);
+  });
+});

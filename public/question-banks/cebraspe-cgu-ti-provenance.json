@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-15.1",
+  "version": "2026-10-15.2",
   "provenance": [
     {
       "id": "cebraspe-inss-2022-common",
@@ -229,71 +229,2131 @@
         "sha256": "8fa05363d412a68021d8c2c4a2360c29921edc19ee8a5c8ccb29f18eee16277b",
         "assetUrl": "/documents/cebraspe-bcb-2024-ti-keyChanges.pdf"
       }
+    },
+    {
+      "id": "cebraspe-recent-072-stm-003-01",
+      "title": "Superior Tribunal Militar — aplicação 2025 — 072_STM_003_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "072_STM_003_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        62,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        86,
+        89,
+        92,
+        93,
+        94,
+        96,
+        98,
+        102,
+        103,
+        104,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "questionCount": 37,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/STM_25/arquivos/072_STM_003_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/09ea87027c964d749018-p1.webp",
+        "reportedOriginalSha256": "09ea87027c964d74901821c8199d8b05b858df553a94afd76feeebe83bae346e",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/09ea87027c964d749018-p1.webp",
+            "page": 1,
+            "sha256": "410a99a33cf9b72ebd614fc59d023a19387c42bf989171f463db74cdcc987834",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/09ea87027c964d749018-p3.webp",
+            "page": 3,
+            "sha256": "5d88a80b39bb38899e67a218f69a12416707d4050d417bd3f24cb974187005e3",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/09ea87027c964d749018-p4.webp",
+            "page": 4,
+            "sha256": "9f4f127fe59b706360d5a6308d293acf3991d9637e9a5e63f744d2b90fe9d44c",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/09ea87027c964d749018-p5.webp",
+            "page": 5,
+            "sha256": "ed313845f586829f116408e79c7127e392364debaf6fb723c314c389247de742",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/STM_25/arquivos/Gab_Definitivo_072_STM_003_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-012.json",
+        "transcriptionArtifactSha256": "19a8f1335bb069b5e68593713eddea8619e428b7cfa6fd1519295213f8cb6d79",
+        "reportedOriginalSha256": "aceda4a73483179604d687f11ad5d59c0229e6e2439ac06df30317f1f6a71461",
+        "items": [
+          {
+            "item": 52,
+            "answer": "C"
+          },
+          {
+            "item": 53,
+            "answer": "C"
+          },
+          {
+            "item": 54,
+            "answer": "C"
+          },
+          {
+            "item": 55,
+            "answer": "E"
+          },
+          {
+            "item": 56,
+            "answer": "E"
+          },
+          {
+            "item": 57,
+            "answer": "C"
+          },
+          {
+            "item": 58,
+            "answer": "E"
+          },
+          {
+            "item": 59,
+            "answer": "E"
+          },
+          {
+            "item": 60,
+            "answer": "E"
+          },
+          {
+            "item": 62,
+            "answer": "C"
+          },
+          {
+            "item": 64,
+            "answer": "E"
+          },
+          {
+            "item": 65,
+            "answer": "E"
+          },
+          {
+            "item": 66,
+            "answer": "C"
+          },
+          {
+            "item": 67,
+            "answer": "C"
+          },
+          {
+            "item": 68,
+            "answer": "E"
+          },
+          {
+            "item": 69,
+            "answer": "E"
+          },
+          {
+            "item": 70,
+            "answer": "E"
+          },
+          {
+            "item": 71,
+            "answer": "E"
+          },
+          {
+            "item": 86,
+            "answer": "E"
+          },
+          {
+            "item": 89,
+            "answer": "C"
+          },
+          {
+            "item": 92,
+            "answer": "E"
+          },
+          {
+            "item": 93,
+            "answer": "C"
+          },
+          {
+            "item": 94,
+            "answer": "C"
+          },
+          {
+            "item": 96,
+            "answer": "E"
+          },
+          {
+            "item": 98,
+            "answer": "C"
+          },
+          {
+            "item": 102,
+            "answer": "E"
+          },
+          {
+            "item": 103,
+            "answer": "E"
+          },
+          {
+            "item": 104,
+            "answer": "C"
+          },
+          {
+            "item": 112,
+            "answer": "E"
+          },
+          {
+            "item": 113,
+            "answer": "C"
+          },
+          {
+            "item": 114,
+            "answer": "E"
+          },
+          {
+            "item": 115,
+            "answer": "C"
+          },
+          {
+            "item": 116,
+            "answer": "C"
+          },
+          {
+            "item": 117,
+            "answer": "E"
+          },
+          {
+            "item": 118,
+            "answer": "C"
+          },
+          {
+            "item": 119,
+            "answer": "E"
+          },
+          {
+            "item": 120,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-065-susep-004-01",
+      "title": "Superintendência de Seguros Privados — aplicação 2025 — 065_SUSEP_004_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "065_SUSEP_004_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        61,
+        66,
+        67,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        80,
+        82,
+        84,
+        85,
+        87,
+        88,
+        89,
+        92,
+        93,
+        99,
+        102,
+        114,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ],
+      "questionCount": 32,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/SUSEP_25/arquivos/065_SUSEP_004_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/b290460384b49d60d642-p1.webp",
+        "reportedOriginalSha256": "b290460384b49d60d642f7cc3428cef4cc38ac727f0deebe44ae6983acd92e47",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/b290460384b49d60d642-p1.webp",
+            "page": 1,
+            "sha256": "a915176945362d1b75b11c45e466dd5a85761e8243f481b3fba5982036a179bc",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/b290460384b49d60d642-p2.webp",
+            "page": 2,
+            "sha256": "8af9d02da30878adba3d8e327226daf3774009462db942aaa6b79eeedf7cd9e5",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/b290460384b49d60d642-p3.webp",
+            "page": 3,
+            "sha256": "6b978652644d444a355e8e1ecc630416cdabb5339f4462569df9c0ccbbdae68b",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/b290460384b49d60d642-p4.webp",
+            "page": 4,
+            "sha256": "cf80927eb1fe2fd126285be53ed98ea2558193e7a7d2be5cfa0f4719802e7886",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/SUSEP_25/arquivos/Gab_Definitivo_065_SUSEP_004_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-012.json",
+        "transcriptionArtifactSha256": "19a8f1335bb069b5e68593713eddea8619e428b7cfa6fd1519295213f8cb6d79",
+        "reportedOriginalSha256": "b43664e8a32e2d48d551084e21969da8bfd118863fc2fcf1c6c22d912d9628cd",
+        "items": [
+          {
+            "item": 61,
+            "answer": "E"
+          },
+          {
+            "item": 66,
+            "answer": "C"
+          },
+          {
+            "item": 67,
+            "answer": "E"
+          },
+          {
+            "item": 69,
+            "answer": "C"
+          },
+          {
+            "item": 70,
+            "answer": "E"
+          },
+          {
+            "item": 71,
+            "answer": "C"
+          },
+          {
+            "item": 72,
+            "answer": "C"
+          },
+          {
+            "item": 73,
+            "answer": "C"
+          },
+          {
+            "item": 74,
+            "answer": "E"
+          },
+          {
+            "item": 75,
+            "answer": "E"
+          },
+          {
+            "item": 76,
+            "answer": "C"
+          },
+          {
+            "item": 77,
+            "answer": "E"
+          },
+          {
+            "item": 78,
+            "answer": "E"
+          },
+          {
+            "item": 80,
+            "answer": "C"
+          },
+          {
+            "item": 82,
+            "answer": "C"
+          },
+          {
+            "item": 84,
+            "answer": "C"
+          },
+          {
+            "item": 85,
+            "answer": "E"
+          },
+          {
+            "item": 87,
+            "answer": "C"
+          },
+          {
+            "item": 88,
+            "answer": "E"
+          },
+          {
+            "item": 89,
+            "answer": "C"
+          },
+          {
+            "item": 92,
+            "answer": "E"
+          },
+          {
+            "item": 93,
+            "answer": "E"
+          },
+          {
+            "item": 99,
+            "answer": "E"
+          },
+          {
+            "item": 102,
+            "answer": "E"
+          },
+          {
+            "item": 114,
+            "answer": "C"
+          },
+          {
+            "item": 121,
+            "answer": "C"
+          },
+          {
+            "item": 122,
+            "answer": "C"
+          },
+          {
+            "item": 123,
+            "answer": "C"
+          },
+          {
+            "item": 124,
+            "answer": "E"
+          },
+          {
+            "item": 125,
+            "answer": "C"
+          },
+          {
+            "item": 126,
+            "answer": "E"
+          },
+          {
+            "item": 127,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-088-fub-018-01",
+      "title": "Universidade de Brasília / FUB — aplicação 2025 — 088_FUB_018_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "088_FUB_018_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        51,
+        53,
+        54,
+        62,
+        69,
+        76,
+        77,
+        78,
+        79,
+        84,
+        85,
+        86,
+        88,
+        89,
+        99,
+        100,
+        101,
+        102,
+        103,
+        105,
+        106,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "questionCount": 30,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/FUB_25/arquivos/088_FUB_018_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/905294ec4d9b7c7f380d-p1.webp",
+        "reportedOriginalSha256": "905294ec4d9b7c7f380d5e36ed5d307ea43b0979e8cdd4aa941cc4cb81ab4260",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/905294ec4d9b7c7f380d-p1.webp",
+            "page": 1,
+            "sha256": "19eaa6c72f2dba61094c447e1cc5b7d46699f3d9c5bc5771181fed01aabbcb7d",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/905294ec4d9b7c7f380d-p3.webp",
+            "page": 3,
+            "sha256": "969d90248a93f8a9f54577d0d66a9feff0d62e57caf15692b861a26507741847",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/905294ec4d9b7c7f380d-p2.webp",
+            "page": 2,
+            "sha256": "cbfe2b2b295b63fd219fc06bd78865a3a7507a8983dc8271596259713733a537",
+            "support": true
+          },
+          {
+            "assetUrl": "/question-pages/905294ec4d9b7c7f380d-p4.webp",
+            "page": 4,
+            "sha256": "ba349f7436e154f941897ebd18932c8d8e05233fa6fdd2d42edf82c6c9db34c0",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/FUB_25/arquivos/Gab_Definitivo_088_FUB_018_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-009.json",
+        "transcriptionArtifactSha256": "5314e5f6badf0b72d6e3aa177e1934193da6fb54b8cb2f7be4dd28ae000640ab",
+        "reportedOriginalSha256": "98976e82f16594a03c05057f4db13738cd67f967142ae97ec0694de7bb92de32",
+        "items": [
+          {
+            "item": 51,
+            "answer": "E"
+          },
+          {
+            "item": 53,
+            "answer": "C"
+          },
+          {
+            "item": 54,
+            "answer": "E"
+          },
+          {
+            "item": 62,
+            "answer": "E"
+          },
+          {
+            "item": 69,
+            "answer": "E"
+          },
+          {
+            "item": 76,
+            "answer": "C"
+          },
+          {
+            "item": 77,
+            "answer": "E"
+          },
+          {
+            "item": 78,
+            "answer": "E"
+          },
+          {
+            "item": 79,
+            "answer": "E"
+          },
+          {
+            "item": 84,
+            "answer": "C"
+          },
+          {
+            "item": 85,
+            "answer": "C"
+          },
+          {
+            "item": 86,
+            "answer": "E"
+          },
+          {
+            "item": 88,
+            "answer": "C"
+          },
+          {
+            "item": 89,
+            "answer": "C"
+          },
+          {
+            "item": 99,
+            "answer": "E"
+          },
+          {
+            "item": 100,
+            "answer": "C"
+          },
+          {
+            "item": 101,
+            "answer": "C"
+          },
+          {
+            "item": 102,
+            "answer": "E"
+          },
+          {
+            "item": 103,
+            "answer": "E"
+          },
+          {
+            "item": 105,
+            "answer": "C"
+          },
+          {
+            "item": 106,
+            "answer": "E"
+          },
+          {
+            "item": 108,
+            "answer": "C"
+          },
+          {
+            "item": 109,
+            "answer": "C"
+          },
+          {
+            "item": 110,
+            "answer": "E"
+          },
+          {
+            "item": 111,
+            "answer": "C"
+          },
+          {
+            "item": 112,
+            "answer": "E"
+          },
+          {
+            "item": 113,
+            "answer": "C"
+          },
+          {
+            "item": 114,
+            "answer": "C"
+          },
+          {
+            "item": 115,
+            "answer": "E"
+          },
+          {
+            "item": 116,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-050-trt10-011-01",
+      "title": "Tribunal Regional do Trabalho da 10ª Região — aplicação 2025 — 050_TRT10_011_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "050_TRT10_011_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        52,
+        54,
+        55,
+        57,
+        59,
+        60,
+        61,
+        62,
+        72,
+        74,
+        75,
+        77,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        102,
+        103,
+        105,
+        106,
+        107,
+        109,
+        110,
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "questionCount": 30,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/TRT10_24/arquivos/050_TRT10_011_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/b57a0cabfbd831b12107-p1.webp",
+        "reportedOriginalSha256": "b57a0cabfbd831b1210795a3e942f9cc09666b58b6420f6f0e82d33706bef266",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/b57a0cabfbd831b12107-p1.webp",
+            "page": 1,
+            "sha256": "f32fde3635137235e477517fda643460f6b625be3c85b395834aa52ba570b5db",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/b57a0cabfbd831b12107-p2.webp",
+            "page": 2,
+            "sha256": "b629083fefa5cd8aa2a26ab0ce7fd366b2b46228e79313c13ee0cdeaffd542c0",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/b57a0cabfbd831b12107-p3.webp",
+            "page": 3,
+            "sha256": "553ad4e2431a7b08e18d4bd19181b715e45b273522991170981afbcc07c65921",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/b57a0cabfbd831b12107-p4.webp",
+            "page": 4,
+            "sha256": "4de36a464d859c1382f743e5f537e59134799c3b78059627ca233e6263e65e99",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/TRT10_24/arquivos/Gab_Definitivo_050_TRT10_011_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-014.json",
+        "transcriptionArtifactSha256": "9b3db03178e5b303cdc8a4e4f3c0e297056d852bf0d8850672425dbb3a7b56a9",
+        "reportedOriginalSha256": "137cfadcf7bbffb4f5b1b91f01bd41884fa5dd4f86313402d17c7e902c40f0dd",
+        "items": [
+          {
+            "item": 52,
+            "answer": "E"
+          },
+          {
+            "item": 54,
+            "answer": "C"
+          },
+          {
+            "item": 55,
+            "answer": "E"
+          },
+          {
+            "item": 57,
+            "answer": "C"
+          },
+          {
+            "item": 59,
+            "answer": "E"
+          },
+          {
+            "item": 60,
+            "answer": "C"
+          },
+          {
+            "item": 61,
+            "answer": "C"
+          },
+          {
+            "item": 62,
+            "answer": "E"
+          },
+          {
+            "item": 72,
+            "answer": "C"
+          },
+          {
+            "item": 74,
+            "answer": "E"
+          },
+          {
+            "item": 75,
+            "answer": "C"
+          },
+          {
+            "item": 77,
+            "answer": "E"
+          },
+          {
+            "item": 95,
+            "answer": "E"
+          },
+          {
+            "item": 96,
+            "answer": "C"
+          },
+          {
+            "item": 97,
+            "answer": "E"
+          },
+          {
+            "item": 98,
+            "answer": "C"
+          },
+          {
+            "item": 99,
+            "answer": "E"
+          },
+          {
+            "item": 100,
+            "answer": "C"
+          },
+          {
+            "item": 102,
+            "answer": "E"
+          },
+          {
+            "item": 103,
+            "answer": "C"
+          },
+          {
+            "item": 105,
+            "answer": "E"
+          },
+          {
+            "item": 106,
+            "answer": "C"
+          },
+          {
+            "item": 107,
+            "answer": "C"
+          },
+          {
+            "item": 109,
+            "answer": "C"
+          },
+          {
+            "item": 110,
+            "answer": "E"
+          },
+          {
+            "item": 116,
+            "answer": "C"
+          },
+          {
+            "item": 117,
+            "answer": "E"
+          },
+          {
+            "item": 118,
+            "answer": "C"
+          },
+          {
+            "item": 119,
+            "answer": "E"
+          },
+          {
+            "item": 120,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-034-trf6-003-01",
+      "title": "Tribunal Regional Federal da 6ª Região — aplicação 2025 — 034_TRF6_003_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "034_TRF6_003_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        52,
+        53,
+        54,
+        56,
+        57,
+        67,
+        71,
+        74,
+        75,
+        76,
+        85,
+        86,
+        87,
+        88,
+        91,
+        92,
+        93,
+        95,
+        97,
+        98,
+        99,
+        101,
+        103,
+        104,
+        105,
+        106,
+        113,
+        116
+      ],
+      "questionCount": 28,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/TRF6_24/arquivos/034_TRF6_003_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/181c7664295cde80c4e5-p1.webp",
+        "reportedOriginalSha256": "181c7664295cde80c4e592da61cce77525570b0b745b0188a6272444c32fa8bd",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/181c7664295cde80c4e5-p1.webp",
+            "page": 1,
+            "sha256": "dd5b815f606fec673844f947e14e972e515cb179915341fc3d00920709862c17",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/181c7664295cde80c4e5-p2.webp",
+            "page": 2,
+            "sha256": "4cc61743496acaf3436c4fcf07cf4c4a821cbe6940e5caa5eb972145be25596b",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/181c7664295cde80c4e5-p3.webp",
+            "page": 3,
+            "sha256": "38f37ea4f61bf468486fa55a5ded9913dc30e21c1c028d01197baa276e7e010d",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/TRF6_24/arquivos/GAB_DEFINITIVO_034_TRF6_003_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-014.json",
+        "transcriptionArtifactSha256": "9b3db03178e5b303cdc8a4e4f3c0e297056d852bf0d8850672425dbb3a7b56a9",
+        "reportedOriginalSha256": "14881981f765bfe30c1b48f4ee3d8d452788b84aa76b6c69d177243751435d7a",
+        "items": [
+          {
+            "item": 52,
+            "answer": "C"
+          },
+          {
+            "item": 53,
+            "answer": "E"
+          },
+          {
+            "item": 54,
+            "answer": "C"
+          },
+          {
+            "item": 56,
+            "answer": "E"
+          },
+          {
+            "item": 57,
+            "answer": "C"
+          },
+          {
+            "item": 67,
+            "answer": "E"
+          },
+          {
+            "item": 71,
+            "answer": "C"
+          },
+          {
+            "item": 74,
+            "answer": "C"
+          },
+          {
+            "item": 75,
+            "answer": "E"
+          },
+          {
+            "item": 76,
+            "answer": "E"
+          },
+          {
+            "item": 85,
+            "answer": "E"
+          },
+          {
+            "item": 86,
+            "answer": "C"
+          },
+          {
+            "item": 87,
+            "answer": "C"
+          },
+          {
+            "item": 88,
+            "answer": "E"
+          },
+          {
+            "item": 91,
+            "answer": "C"
+          },
+          {
+            "item": 92,
+            "answer": "C"
+          },
+          {
+            "item": 93,
+            "answer": "C"
+          },
+          {
+            "item": 95,
+            "answer": "E"
+          },
+          {
+            "item": 97,
+            "answer": "C"
+          },
+          {
+            "item": 98,
+            "answer": "E"
+          },
+          {
+            "item": 99,
+            "answer": "E"
+          },
+          {
+            "item": 101,
+            "answer": "C"
+          },
+          {
+            "item": 103,
+            "answer": "C"
+          },
+          {
+            "item": 104,
+            "answer": "C"
+          },
+          {
+            "item": 105,
+            "answer": "E"
+          },
+          {
+            "item": 106,
+            "answer": "E"
+          },
+          {
+            "item": 113,
+            "answer": "C"
+          },
+          {
+            "item": 116,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-072-stm-cg2-01",
+      "title": "Superior Tribunal Militar — aplicação 2025 — 072_STM_CG2_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "072_STM_CG2_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        15,
+        16,
+        17,
+        19,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "questionCount": 11,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/STM_25/arquivos/072_STM_CG2_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/c148531114c7cd06eed6-p2.webp",
+        "reportedOriginalSha256": "c148531114c7cd06eed6330c1f10d36a154f023ef12eb51d473db28255e09c68",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/c148531114c7cd06eed6-p2.webp",
+            "page": 2,
+            "sha256": "3340d989bddf35a3e2405916745659048b6cdcad9aef94531f88a0ce708356c0",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/STM_25/arquivos/Gab_Definitivo_072_STM_CG2_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-012.json",
+        "transcriptionArtifactSha256": "19a8f1335bb069b5e68593713eddea8619e428b7cfa6fd1519295213f8cb6d79",
+        "reportedOriginalSha256": "d821dc1770f6d5d81cd943a866cf64191db5bc40409a9a30a6ffc2f9adfe1041",
+        "items": [
+          {
+            "item": 15,
+            "answer": "C"
+          },
+          {
+            "item": 16,
+            "answer": "C"
+          },
+          {
+            "item": 17,
+            "answer": "E"
+          },
+          {
+            "item": 19,
+            "answer": "E"
+          },
+          {
+            "item": 28,
+            "answer": "E"
+          },
+          {
+            "item": 29,
+            "answer": "C"
+          },
+          {
+            "item": 30,
+            "answer": "E"
+          },
+          {
+            "item": 31,
+            "answer": "E"
+          },
+          {
+            "item": 32,
+            "answer": "C"
+          },
+          {
+            "item": 33,
+            "answer": "C"
+          },
+          {
+            "item": 34,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-031-bdmg-cg1-01",
+      "title": "Banco de Desenvolvimento de Minas Gerais — aplicação 2025 — 031_BDMG_CG1_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "031_BDMG_CG1_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "questionCount": 15,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/BDMG_24/arquivos/031_BDMG_CG1_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/ad81f989754f505c94e5-p2.webp",
+        "reportedOriginalSha256": "ad81f989754f505c94e5e4281a5fe66d88451d944d067cfa1a0f84d1766e316b",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/ad81f989754f505c94e5-p2.webp",
+            "page": 2,
+            "sha256": "bd8ac5ebcb9e27c5fef040ccbc0aafdde484cb1aa62664af31378a91be529d7c",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/ad81f989754f505c94e5-p3.webp",
+            "page": 3,
+            "sha256": "56fe6f960265e7e1bc81fe874ebec2052e2daa04b892b63e19fdfb1f10e9a631",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/ad81f989754f505c94e5-p1.webp",
+            "page": 1,
+            "sha256": "fecca6a809be32a1000d6feda33e1a10121a10ea3b21f70499983cc15795a567",
+            "support": true
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/BDMG_24/arquivos/Gab_Definitivo_031_BDMG_CG1_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-007.json",
+        "transcriptionArtifactSha256": "1287a07a69d79b0406b171e59e65fb20a243c46fd762fe4dcadf1b7e189c8c59",
+        "reportedOriginalSha256": "5c70f87f66adecefda3dbc4bbfc83e41d2990b5d5656adcbe4ca1abb4ed790c3",
+        "items": [
+          {
+            "item": 31,
+            "answer": "E"
+          },
+          {
+            "item": 32,
+            "answer": "E"
+          },
+          {
+            "item": 33,
+            "answer": "C"
+          },
+          {
+            "item": 34,
+            "answer": "C"
+          },
+          {
+            "item": 35,
+            "answer": "E"
+          },
+          {
+            "item": 36,
+            "answer": "C"
+          },
+          {
+            "item": 37,
+            "answer": "C"
+          },
+          {
+            "item": 38,
+            "answer": "E"
+          },
+          {
+            "item": 39,
+            "answer": "E"
+          },
+          {
+            "item": 40,
+            "answer": "C"
+          },
+          {
+            "item": 41,
+            "answer": "E"
+          },
+          {
+            "item": 42,
+            "answer": "E"
+          },
+          {
+            "item": 43,
+            "answer": "C"
+          },
+          {
+            "item": 44,
+            "answer": "E"
+          },
+          {
+            "item": 45,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-040-funprespexe-cb1-01",
+      "title": "FUNPRESP-EXE — aplicação 2025 — 040_FUNPRESPEXE_CB1_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "040_FUNPRESPEXE_CB1_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        26,
+        27,
+        28,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "questionCount": 9,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/FUNPRESP_24_EXE/arquivos/040_FUNPRESPEXE_CB1_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/21eb65b03a6b38c153d3-p2.webp",
+        "reportedOriginalSha256": "21eb65b03a6b38c153d3cb3ee5c59a581be1e30803a4660780fa451723112dea",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/21eb65b03a6b38c153d3-p2.webp",
+            "page": 2,
+            "sha256": "68995c5621ce1e6925cede414e57dbdb4aa5e0d31139fda46e59ea0fe191aea0",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/21eb65b03a6b38c153d3-p3.webp",
+            "page": 3,
+            "sha256": "97e9c0e11a9a0dcbd11daa2a95a0fb8abb39abbe9d48f8e8943efba1f8cbf990",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/FUNPRESP_24_EXE/arquivos/Gab_Definitivo_040_FUNPRESPEXE_CB1_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-009.json",
+        "transcriptionArtifactSha256": "5314e5f6badf0b72d6e3aa177e1934193da6fb54b8cb2f7be4dd28ae000640ab",
+        "reportedOriginalSha256": "6f6912838837da632a123f29392e46eb073c130f71603b865caebd5180031a4d",
+        "items": [
+          {
+            "item": 26,
+            "answer": "C"
+          },
+          {
+            "item": 27,
+            "answer": "E"
+          },
+          {
+            "item": 28,
+            "answer": "E"
+          },
+          {
+            "item": 31,
+            "answer": "C"
+          },
+          {
+            "item": 32,
+            "answer": "C"
+          },
+          {
+            "item": 33,
+            "answer": "C"
+          },
+          {
+            "item": 34,
+            "answer": "E"
+          },
+          {
+            "item": 35,
+            "answer": "E"
+          },
+          {
+            "item": 36,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-038-anm-cg4-01",
+      "title": "Agência Nacional de Mineração — aplicação 2025 — 038_ANM_CG4_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "038_ANM_CG4_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        30,
+        31,
+        33
+      ],
+      "questionCount": 3,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/ANM_24/arquivos/038_ANM_CG4_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/2b4657380c7bae1246e4-p3.webp",
+        "reportedOriginalSha256": "2b4657380c7bae1246e453ca17fbe6ab49564bbb2d86b352fde65e2989388d91",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/2b4657380c7bae1246e4-p3.webp",
+            "page": 3,
+            "sha256": "2f6c6848ad4491455388d6674a4c2b041981238a5778a12e2b0295f6e45fc093",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/ANM_24/arquivos/Gab_Definitivo_038_ANM_CG4_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-006.json",
+        "transcriptionArtifactSha256": "ac17d4ee8d09a0b17fc5ef692ef86c7e413a97fb05ab02f437134c44fb25b222",
+        "reportedOriginalSha256": "43175a13d4468e9d511238584552973975037d9e2bad23b974d9141ec9da2bcb",
+        "items": [
+          {
+            "item": 30,
+            "answer": "E"
+          },
+          {
+            "item": 31,
+            "answer": "C"
+          },
+          {
+            "item": 33,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-088-fub-cb4-01",
+      "title": "Universidade de Brasília / FUB — aplicação 2025 — 088_FUB_CB4_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "088_FUB_CB4_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        22
+      ],
+      "questionCount": 1,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/FUB_25/arquivos/088_FUB_CB4_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/97a7cd305a277ee15836-p2.webp",
+        "reportedOriginalSha256": "97a7cd305a277ee158361e0964a5765f4198fc19854e598f528c9ea5d009f2bd",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/97a7cd305a277ee15836-p2.webp",
+            "page": 2,
+            "sha256": "7cbe4bab64a0c4352a2008aba9909a4c9c785ca0bc4a262733d4f4fa172e36ad",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/FUB_25/arquivos/Gab_Definitivo_088_FUB_CB4_01.pdf",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-009.json",
+        "transcriptionArtifactSha256": "5314e5f6badf0b72d6e3aa177e1934193da6fb54b8cb2f7be4dd28ae000640ab",
+        "reportedOriginalSha256": "f5a6702379b1d004072036ad5966dfbf3d1b30bbbe27f5fff971057379511c29",
+        "items": [
+          {
+            "item": 22,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-034-trf6-027-01",
+      "title": "Tribunal Regional Federal da 6ª Região — aplicação 2025 — 034_TRF6_027_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "034_TRF6_027_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        115,
+        118,
+        120
+      ],
+      "questionCount": 3,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/TRF6_24/arquivos/034_TRF6_027_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/094f2be600680831a2f7-p4.webp",
+        "reportedOriginalSha256": "094f2be600680831a2f788fc3aa8c58ef08484168b4087e6d917ac9b0f8d72d5",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/094f2be600680831a2f7-p4.webp",
+            "page": 4,
+            "sha256": "d938b3f5acda98819bcdc72ebe9b18a26d2d2520a2b3c6bcb98660fd570d3cec",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/TRF6_24/arquivos/GAB_DEFINITIVO_034_TRF6_027_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-014.json",
+        "transcriptionArtifactSha256": "9b3db03178e5b303cdc8a4e4f3c0e297056d852bf0d8850672425dbb3a7b56a9",
+        "reportedOriginalSha256": "ca3c745c9a69ebe33918913e38589410654962e6fd2299f0c7b2c69ddf1e842d",
+        "items": [
+          {
+            "item": 115,
+            "answer": "E"
+          },
+          {
+            "item": 118,
+            "answer": "E"
+          },
+          {
+            "item": 120,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-968-pref-mossoro-analista-auditor-007-01",
+      "title": "Prefeitura de Mossoró — aplicação 2024 — 968_PREF_MOSSORO_ANALISTA_AUDITOR_007_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "968_PREF_MOSSORO_ANALISTA_AUDITOR_007_01",
+      "year": 2024,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        55,
+        57,
+        67,
+        69,
+        70,
+        71,
+        72,
+        74,
+        75
+      ],
+      "questionCount": 9,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/PREF_MOSSORO_RN_24/arquivos/968_PREF_MOSSORO_ANALISTA_AUDITOR_007_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/7c03f648cc2c1f281d4d-p1.webp",
+        "reportedOriginalSha256": "7c03f648cc2c1f281d4dab67796d6f78e9c67f8d5f75b59955d89a8ca1ae288e",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/7c03f648cc2c1f281d4d-p1.webp",
+            "page": 1,
+            "sha256": "0a909eb1f1f656654cdd6564e53d5b6902301f9b5ee96f07ff63a998247d5a47",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/7c03f648cc2c1f281d4d-p2.webp",
+            "page": 2,
+            "sha256": "ab300eeaff98bcd23cae1c96ad93334441c0118a1fa96e4e131b3cc2cbffb2cb",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/PREF_MOSSORO_RN_24/arquivos/GAB_DEFINITIVO_968_PREF_MOSSORO_ANALISTA_AUDITOR_007_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-011.json",
+        "transcriptionArtifactSha256": "48e2ee834706adca5d6046a4b3fdf9f814f7d4501e8be5cc725bfe9cef878e40",
+        "reportedOriginalSha256": "28dffbd1925ab7da28461f4072ce70463201f926b0e02afc87f60707af9839e2",
+        "items": [
+          {
+            "item": 55,
+            "answer": "E"
+          },
+          {
+            "item": 57,
+            "answer": "E"
+          },
+          {
+            "item": 67,
+            "answer": "C"
+          },
+          {
+            "item": 69,
+            "answer": "C"
+          },
+          {
+            "item": 70,
+            "answer": "C"
+          },
+          {
+            "item": 71,
+            "answer": "E"
+          },
+          {
+            "item": 72,
+            "answer": "E"
+          },
+          {
+            "item": 74,
+            "answer": "C"
+          },
+          {
+            "item": 75,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-917-cnpq-analista-005-01",
+      "title": "CNPq — aplicação 2024 — 917_CNPQ_ANALISTA_005_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "917_CNPQ_ANALISTA_005_01",
+      "year": 2024,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        96,
+        97,
+        98
+      ],
+      "questionCount": 3,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/CNPQ_23/arquivos/917_CNPQ_ANALISTA_005_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/3a2fe654647efa32f80e-p3.webp",
+        "reportedOriginalSha256": "3a2fe654647efa32f80eab1caa113b9388cd23b8cbab0570fcc441c72797b646",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/3a2fe654647efa32f80e-p3.webp",
+            "page": 3,
+            "sha256": "e6cc002dff70a07223bf28720659ee9a825ab83e478d66292e99c9ef3b4eba20",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/CNPQ_23/arquivos/GAB_DEFINITIVO_917_CNPQ_ANALISTA_005_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-007.json",
+        "transcriptionArtifactSha256": "1287a07a69d79b0406b171e59e65fb20a243c46fd762fe4dcadf1b7e189c8c59",
+        "reportedOriginalSha256": "27875af704dca628ffb6bde2656d1c7b9efa15c16de8514648224f085de3a161",
+        "items": [
+          {
+            "item": 96,
+            "answer": "E"
+          },
+          {
+            "item": 97,
+            "answer": "C"
+          },
+          {
+            "item": 98,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-040-funprespexe-008-01",
+      "title": "FUNPRESP-EXE — aplicação 2025 — 040_FUNPRESPEXE_008_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "040_FUNPRESPEXE_008_01",
+      "year": 2025,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        109,
+        110
+      ],
+      "questionCount": 2,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/FUNPRESP_24_EXE/arquivos/040_FUNPRESPEXE_008_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/83532997059debd57904-p2.webp",
+        "reportedOriginalSha256": "83532997059debd579046120f8fd9ebaef49d1356ed1e243ef777cd3b487dd3c",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/83532997059debd57904-p2.webp",
+            "page": 2,
+            "sha256": "d4554f8833fa5bed03ea016970bfdb4483c04abfff05860e6dc535d8c085ef49",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/FUNPRESP_24_EXE/arquivos/Gab_Definitivo_040_FUNPRESPEXE_008_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-009.json",
+        "transcriptionArtifactSha256": "5314e5f6badf0b72d6e3aa177e1934193da6fb54b8cb2f7be4dd28ae000640ab",
+        "reportedOriginalSha256": "72115ce8bfc18bebc0c4e963e13f2aadc1746c40b6c89f1af69dd8bd7ee3e4bf",
+        "items": [
+          {
+            "item": 109,
+            "answer": "E"
+          },
+          {
+            "item": 110,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-958-mpo-analista-008-01",
+      "title": "Ministério do Planejamento e Orçamento — aplicação 2024 — 958_MPO_ANALISTA_008_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "958_MPO_ANALISTA_008_01",
+      "year": 2024,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        8,
+        91
+      ],
+      "questionCount": 2,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/MPO_24/arquivos/958_MPO_ANALISTA_008_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/95038b99f8d966d8df68-p1.webp",
+        "reportedOriginalSha256": "95038b99f8d966d8df68a5540eaa75b161b47ced8c6bcd9a03a2ab9a59b3e060",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/95038b99f8d966d8df68-p1.webp",
+            "page": 1,
+            "sha256": "59b2bf2248f1a77e0c5bee5f6c2d5ca90d3fe246241d1ed292b073f4a5c9dcf9",
+            "support": false
+          },
+          {
+            "assetUrl": "/question-pages/95038b99f8d966d8df68-p5.webp",
+            "page": 5,
+            "sha256": "3e5382b83aaca0ab66366b1de08536b3811806dabcfe80950afba626cf0c9b8d",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/MPO_24/arquivos/GAB_DEFINITIVO_958_MPO_ANALISTA_008_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-010.json",
+        "transcriptionArtifactSha256": "29d83f7bf30468f8d0abc65dd63a59adb809b18047f2345a1eec5e0f8886297d",
+        "reportedOriginalSha256": "bf116fdcf20fb85cf7a7f2dfaf22109eb6e3ab7bd7d03f9c2e2f930be74ac647",
+        "items": [
+          {
+            "item": 8,
+            "answer": "E"
+          },
+          {
+            "item": 91,
+            "answer": "C"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-979-cnj-cb4-01",
+      "title": "Conselho Nacional de Justiça — aplicação 2024 — 979_CNJ_CB4_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "979_CNJ_CB4_01",
+      "year": 2024,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        18
+      ],
+      "questionCount": 1,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/CNJ_24/arquivos/979_CNJ_CB4_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/3f0e9ef3208e1fa20ef1-p2.webp",
+        "reportedOriginalSha256": "3f0e9ef3208e1fa20ef1f1e1f75a914791c578abf65aa14b77580b6c4852e1d2",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/3f0e9ef3208e1fa20ef1-p2.webp",
+            "page": 2,
+            "sha256": "441594d02d440d87d79a1dfb4975f51a05e336edb29b99ec3f37a07e4f83e19a",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/CNJ_24/arquivos/GAB_DEFINITIVO_979_CNJ_CB4_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-007.json",
+        "transcriptionArtifactSha256": "1287a07a69d79b0406b171e59e65fb20a243c46fd762fe4dcadf1b7e189c8c59",
+        "reportedOriginalSha256": "b646e9f12fb1f810ce715c3a38e2038dee881187ef59362e27dab92f35d752eb",
+        "items": [
+          {
+            "item": 18,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-964-mpgo-cg2-01",
+      "title": "Ministério Público de Goiás — aplicação 2024 — 964_MPGO_CG2_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "964_MPGO_CG2_01",
+      "year": 2024,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        50
+      ],
+      "questionCount": 1,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/MP_GO_24_SERVIDOR/arquivos/964_MPGO_CG2_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/dbe14af466cd3a6f2018-p3.webp",
+        "reportedOriginalSha256": "dbe14af466cd3a6f20184e910fe402eb22d0ad0fe328e710fb32282250926891",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/dbe14af466cd3a6f2018-p3.webp",
+            "page": 3,
+            "sha256": "485342a6585a6c291ee26599df99f8dbcf8953d1b3cf6a66ab2b3997f87c4168",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/MP_GO_24_SERVIDOR/arquivos/GAB_DEFINITIVO_964_MPGO_CG2_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-010.json",
+        "transcriptionArtifactSha256": "29d83f7bf30468f8d0abc65dd63a59adb809b18047f2345a1eec5e0f8886297d",
+        "reportedOriginalSha256": "0cc916df11ddd3f9a807caf0049e87a0e575177a642a59f96077fef978ff892b",
+        "items": [
+          {
+            "item": 50,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-947-capes-cg1-01",
+      "title": "CAPES — aplicação 2024 — 947_CAPES_CG1_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "947_CAPES_CG1_01",
+      "year": 2024,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        43
+      ],
+      "questionCount": 1,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/CAPES_23/arquivos/947_CAPES_CG1_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/b13f1c81ac3d6946b8a2-p3.webp",
+        "reportedOriginalSha256": "b13f1c81ac3d6946b8a2aff59ec1fa9c4ce1440ff11d053faf798b2d0c1d687b",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/b13f1c81ac3d6946b8a2-p3.webp",
+            "page": 3,
+            "sha256": "34d0ec8a5d044694705abc57a1be079dc3fb66aa36f71f1a114942be31b934e6",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/CAPES_23/arquivos/GAB_DEFINITIVO_947_CAPES_CG1_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-007.json",
+        "transcriptionArtifactSha256": "1287a07a69d79b0406b171e59e65fb20a243c46fd762fe4dcadf1b7e189c8c59",
+        "reportedOriginalSha256": "2481d17de55417f208168791778710a8c8495b316f5f08ec039b53c2dcc04209",
+        "items": [
+          {
+            "item": 43,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-recent-930-inpi-cc2-01",
+      "title": "Instituto Nacional da Propriedade Industrial — aplicação 2024 — 930_INPI_CC2_01",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "930_INPI_CC2_01",
+      "year": 2024,
+      "yearBasis": "public-catalog-application",
+      "keyStatus": "final",
+      "questionNumbers": [
+        90,
+        92,
+        95
+      ],
+      "questionCount": 3,
+      "proof": {
+        "format": "preserved-page-images",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/INPI_23/arquivos/930_INPI_CC2_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/dist/assets/questions/cebraspe/4ad1364128f7914fb0db-p2.webp",
+        "reportedOriginalSha256": "4ad1364128f7914fb0db5836c02c9d4304cb8b3bf1b03509da16c93ac9c16c28",
+        "pages": [
+          {
+            "assetUrl": "/question-pages/4ad1364128f7914fb0db-p2.webp",
+            "page": 2,
+            "sha256": "2ae86b5c722183702ab9a9427bc16963e7b95514d8e19d55988e102beb55aa50",
+            "support": false
+          }
+        ]
+      },
+      "key": {
+        "format": "public-json-transcription",
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/INPI_23/arquivos/GAB_DEFINITIVO_930_INPI_CC2_01.PDF",
+        "mirrorUrl": "https://github.com/aureovinicius/concursos-cgu/blob/a14f358db6ba778752242220c867052c54cd92a9/data/official-content/part-010.json",
+        "transcriptionArtifactSha256": "29d83f7bf30468f8d0abc65dd63a59adb809b18047f2345a1eec5e0f8886297d",
+        "reportedOriginalSha256": "e6cc41da9867a694269a86fb7f4874299799bec7c0d07802496fd5bd48e83dea",
+        "items": [
+          {
+            "item": 90,
+            "answer": "C"
+          },
+          {
+            "item": 92,
+            "answer": "E"
+          },
+          {
+            "item": 95,
+            "answer": "E"
+          }
+        ]
+      },
+      "verification": "As páginas preservadas e as chaves transcritas provêm de um catálogo público com política de pareamento pelo código completo do caderno. Foram selecionados somente itens oficiais C/E e não anulados. O PDF original do gabarito não foi conferido nesta importação; não se declara autenticação do CDN nem revalidação atual das normas. Hash do PDF reportado pelo catálogo é separado do hash das reproduções efetivamente preservadas.",
+      "classification": "Vínculo aos tópicos CGU é editorial, com preservação de versões e situações hipotéticas. Não representa classificação oficial, incidência da banca ou cobertura integral.",
+      "excluded": "Múltipla escolha não foi convertida em C/E. Conteúdos de outros cargos, legislação local sem aplicação ao tema e itens sem vínculo suficiente foram excluídos. Nenhum comentário didático automático incorporado."
+    },
+    {
+      "id": "cebraspe-irbr-2026-manha",
+      "title": "IRBr/CACD 2026 — primeira fase, manha: seleção para CGU",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "IRBR-2026-MANHA",
+      "examDate": "2026-03-29",
+      "keyStatus": "final",
+      "proof": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/IRBR_26_DIPLOMACIA/arquivos/9AFA463453FEF0A89EBB56387CCC39386F5B09A3A84D342A4112BB6B1339E891.pdf",
+        "mirrorUrl": "https://github.com/JSSO0/padrao-embaixador/blob/e679845a478b9c1be3c3812d5d4c3f0ed9a17da4/data/raw/CACD_2026/cebraspe/prova_objetiva__66ea1db4.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/JSSO0/padrao-embaixador/e679845a478b9c1be3c3812d5d4c3f0ed9a17da4/data/raw/CACD_2026/cebraspe/prova_objetiva__66ea1db4.pdf",
+        "sha256": "1bc133b3b86b1623bf843b8a425cc937fe66998b9556a6a1e591dedfeb981f02",
+        "assetUrl": "/documents/cebraspe-irbr-2026-manha-proof.pdf"
+      },
+      "key": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/IRBR_26_DIPLOMACIA/arquivos/74D4CBB66C3F291DEAA5FFB5AA4E81D32BCFEA62033535D0EFC65A35934D2DF1.pdf",
+        "mirrorUrl": "https://github.com/JSSO0/padrao-embaixador/blob/e679845a478b9c1be3c3812d5d4c3f0ed9a17da4/data/raw/CACD_2026/cebraspe/gabarito_definitivo__6380322e.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/JSSO0/padrao-embaixador/e679845a478b9c1be3c3812d5d4c3f0ed9a17da4/data/raw/CACD_2026/cebraspe/gabarito_definitivo__6380322e.pdf",
+        "sha256": "7d9f1d709d7b8245197d5457d3ef4c191b59a3474953c516014d02d505c90942",
+        "assetUrl": "/documents/cebraspe-irbr-2026-manha-key.pdf"
+      },
+      "questionNumbers": [
+        99,
+        100,
+        106,
+        107,
+        108,
+        111,
+        112,
+        113,
+        114,
+        115,
+        118,
+        119,
+        120
+      ],
+      "questionCount": 13,
+      "verification": "Cabeçalho CEBRASPE – IRBr – Edital: 2026 na prova, aplicação de 29/03/2026 e gabarito oficial definitivo; 120 chaves por turno, com anulados excluídos. PDFs obtidos de espelho público com commit fixo e hashes conferidos. Acesso direto ao CDN permanece bloqueado por HTTP 403.",
+      "classification": "Mapeamento CGU editorial restrito aos tópicos comuns; idiomas, história diplomática, economia especializada, relações internacionais e demais itens sem aderência não foram importados.",
+      "excluded": "Itens anulados e conteúdos sem pertinência direta ao edital CGU de referência excluídos. Estatísticas de censos são mantidas com a data original, sem apresentá-las como retrato atualizado."
+    },
+    {
+      "id": "cebraspe-irbr-2026-tarde",
+      "title": "IRBr/CACD 2026 — primeira fase, tarde: seleção para CGU",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "IRBR-2026-TARDE",
+      "examDate": "2026-03-29",
+      "keyStatus": "final",
+      "proof": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/IRBR_26_DIPLOMACIA/arquivos/A74A4FFC747ECD4287A7D9745DEE6B9364AFA6CF3470FDA6C33FBC2DC689B590.pdf",
+        "mirrorUrl": "https://github.com/JSSO0/padrao-embaixador/blob/e679845a478b9c1be3c3812d5d4c3f0ed9a17da4/data/raw/CACD_2026/cebraspe/prova_objetiva__c604e903.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/JSSO0/padrao-embaixador/e679845a478b9c1be3c3812d5d4c3f0ed9a17da4/data/raw/CACD_2026/cebraspe/prova_objetiva__c604e903.pdf",
+        "sha256": "bf9cf4e95ad66f4dd19e4cc0eab2479ae3ab9904ec7c440e2a75a35a1ff3e506",
+        "assetUrl": "/documents/cebraspe-irbr-2026-tarde-proof.pdf"
+      },
+      "key": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/IRBR_26_DIPLOMACIA/arquivos/0865083195C49C458540DFEAFE373699FC734D655AABCE22F960E69DFFE2D007.pdf",
+        "mirrorUrl": "https://github.com/JSSO0/padrao-embaixador/blob/e679845a478b9c1be3c3812d5d4c3f0ed9a17da4/data/raw/CACD_2026/cebraspe/gabarito_definitivo__89c364da.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/JSSO0/padrao-embaixador/e679845a478b9c1be3c3812d5d4c3f0ed9a17da4/data/raw/CACD_2026/cebraspe/gabarito_definitivo__89c364da.pdf",
+        "sha256": "5a6f464388d6b0510d7327a40aa55dd0d58665e815f6355a748392e7cbb2595d",
+        "assetUrl": "/documents/cebraspe-irbr-2026-tarde-key.pdf"
+      },
+      "questionNumbers": [
+        216,
+        217,
+        218
+      ],
+      "questionCount": 3,
+      "verification": "Cabeçalho CEBRASPE – IRBr – Edital: 2026 na prova, aplicação de 29/03/2026 e gabarito oficial definitivo; 120 chaves por turno, com anulados excluídos. PDFs obtidos de espelho público com commit fixo e hashes conferidos. Acesso direto ao CDN permanece bloqueado por HTTP 403.",
+      "classification": "Mapeamento CGU editorial restrito aos tópicos comuns; idiomas, história diplomática, economia especializada, relações internacionais e demais itens sem aderência não foram importados.",
+      "excluded": "Itens anulados e conteúdos sem pertinência direta ao edital CGU de referência excluídos. Estatísticas de censos são mantidas com a data original, sem apresentá-las como retrato atualizado."
     }
   ],
   "coverage": {
-    "basis": "Contagem de itens selecionados nesta base. Não representa incidência histórica na banca nem domínio do candidato.",
+    "basis": "Contagem editorial da seleção disponível; não mede domínio, incidência histórica ou cobertura integral do conteúdo.",
     "disciplineCount": 13,
-    "coveredDisciplines": 11,
+    "coveredDisciplines": 13,
     "topicCount": 205,
-    "coveredTopics": 39,
+    "coveredTopics": 94,
     "byBlock": {
-      "p1": 21,
-      "p2": 10,
-      "p3": 47
+      "p1": 55,
+      "p2": 71,
+      "p3": 189
     },
     "byDiscipline": [
       {
         "discipline": "ESTADO, DEMOCRACIA, DIREITOS E CIÊNCIA POLÍTICA",
-        "questions": 9
+        "questions": 21,
+        "newQuestions": 12,
+        "newestYear": 2026
       },
       {
         "discipline": "SOCIEDADE BRASILEIRA, DESIGUALDADES, DIVERSIDADE E DESENVOLVIMENTO",
-        "questions": 1
+        "questions": 9,
+        "newQuestions": 8,
+        "newestYear": 2026
       },
       {
         "discipline": "ÉTICA PÚBLICA E RESPONSABILIDADE PROFISSIONAL",
-        "questions": 4
+        "questions": 10,
+        "newQuestions": 6,
+        "newestYear": 2025
       },
       {
         "discipline": "ADMINISTRAÇÃO PÚBLICA E FUNDAMENTOS DE POLÍTICAS PÚBLICAS",
-        "questions": 7
+        "questions": 15,
+        "newQuestions": 8,
+        "newestYear": 2026
       },
       {
         "discipline": "FUNDAMENTOS DE GOVERNANÇA, RISCOS E INTEGRIDADE PÚBLICA E PRIVADA",
-        "questions": 0
+        "questions": 21,
+        "newQuestions": 21,
+        "newestYear": 2025
       },
       {
         "discipline": "FUNDAMENTOS DE TRANSPARÊNCIA, OUVIDORIA E PARTICIPAÇÃO SOCIAL",
-        "questions": 3
+        "questions": 17,
+        "newQuestions": 14,
+        "newestYear": 2025
       },
       {
         "discipline": "FUNDAMENTOS DE DIREITO PÚBLICO APLICADO, CONTROLE E RESPONSABILIZAÇÃO",
-        "questions": 6
+        "questions": 16,
+        "newQuestions": 10,
+        "newestYear": 2025
       },
       {
         "discipline": "FUNDAMENTOS DE EVIDÊNCIAS, DADOS E INTELIGÊNCIA ARTIFICIAL",
-        "questions": 1
+        "questions": 13,
+        "newQuestions": 12,
+        "newestYear": 2025
       },
       {
         "discipline": "FUNDAMENTOS DE AUDITORIA GOVERNAMENTAL E ATUAÇÃO INTEGRADA DA CGU",
-        "questions": 0
+        "questions": 4,
+        "newQuestions": 4,
+        "newestYear": 2025
       },
       {
         "discipline": "ENGENHARIA DE SOFTWARE E PROGRAMAÇÃO",
-        "questions": 5
+        "questions": 26,
+        "newQuestions": 21,
+        "newestYear": 2025
       },
       {
         "discipline": "ARQUITETURA E INTEGRAÇÃO DE SISTEMAS",
-        "questions": 28
+        "questions": 62,
+        "newQuestions": 34,
+        "newestYear": 2025
       },
       {
         "discipline": "PERSISTÊNCIA, INTEGRAÇÃO E PROTEÇÃO DE DADOS",
-        "questions": 4
+        "questions": 48,
+        "newQuestions": 44,
+        "newestYear": 2025
       },
       {
         "discipline": "DESENVOLVIMENTO SEGURO, QUALIDADE E GESTÃO DA ENTREGA",
-        "questions": 10
+        "questions": 53,
+        "newQuestions": 43,
+        "newestYear": 2025
       }
     ],
     "byExam": {
@@ -301,11 +2361,72 @@
       "CEBRASPE-959_BCB_CB1_01": 5,
       "CEBRASPE-378_ABIN_CB1_01": 8,
       "CEBRASPE-378_ABIN_001_01": 1,
-      "CEBRASPE-BCB-2024-959_BCB_002_01": 48
+      "CEBRASPE-BCB-2024-959_BCB_002_01": 48,
+      "CEBRASPE-STM_25-072_STM_003_01": 37,
+      "CEBRASPE-SUSEP_25-065_SUSEP_004_01": 32,
+      "CEBRASPE-FUB_25-088_FUB_018_01": 30,
+      "CEBRASPE-TRT10_24-050_TRT10_011_01": 30,
+      "CEBRASPE-TRF6_24-034_TRF6_003_01": 28,
+      "CEBRASPE-STM_25-072_STM_CG2_01": 11,
+      "CEBRASPE-BDMG_24-031_BDMG_CG1_01": 15,
+      "CEBRASPE-FUNPRESP_24_EXE-040_FUNPRESPEXE_CB1_01": 9,
+      "CEBRASPE-ANM_24-038_ANM_CG4_01": 3,
+      "CEBRASPE-FUB_25-088_FUB_CB4_01": 1,
+      "CEBRASPE-TRF6_24-034_TRF6_027_01": 3,
+      "CEBRASPE-PREF_MOSSORO_RN_24-968_PREF_MOSSORO_ANALISTA_AUDITOR_007_01": 9,
+      "CEBRASPE-CNPQ_23-917_CNPQ_ANALISTA_005_01": 3,
+      "CEBRASPE-FUNPRESP_24_EXE-040_FUNPRESPEXE_008_01": 2,
+      "CEBRASPE-MPO_24-958_MPO_ANALISTA_008_01": 2,
+      "CEBRASPE-CNJ_24-979_CNJ_CB4_01": 1,
+      "CEBRASPE-MP_GO_24_SERVIDOR-964_MPGO_CG2_01": 1,
+      "CEBRASPE-CAPES_23-947_CAPES_CG1_01": 1,
+      "CEBRASPE-INPI_23-930_INPI_CC2_01": 3,
+      "CEBRASPE-IRBR-2026-MANHA": 13,
+      "CEBRASPE-IRBR-2026-TARDE": 3
     },
-    "missingDisciplines": [
-      "FUNDAMENTOS DE GOVERNANÇA, RISCOS E INTEGRIDADE PÚBLICA E PRIVADA",
-      "FUNDAMENTOS DE AUDITORIA GOVERNAMENTAL E ATUAÇÃO INTEGRADA DA CGU"
+    "byYear": {
+      "2022": 16,
+      "2024": 73,
+      "2018": 9,
+      "2025": 201,
+      "2026": 16
+    },
+    "newByYear": {
+      "2025": 201,
+      "2024": 20,
+      "2026": 16
+    },
+    "missingDisciplines": [],
+    "smallSamples": [
+      {
+        "discipline": "SOCIEDADE BRASILEIRA, DESIGUALDADES, DIVERSIDADE E DESENVOLVIMENTO",
+        "questions": 9
+      },
+      {
+        "discipline": "FUNDAMENTOS DE AUDITORIA GOVERNAMENTAL E ATUAÇÃO INTEGRADA DA CGU",
+        "questions": 4
+      }
     ]
+  },
+  "publicCatalogSelection": {
+    "assetUrl": "/question-banks/cebraspe-recent-catalog-selection.json",
+    "sha256": "652554000508c5c7569562531b2a55ca3e64d36da5cd4a6f9def96e1c6d71b7a",
+    "repository": "aureovinicius/concursos-cgu",
+    "commit": "a14f358db6ba778752242220c867052c54cd92a9",
+    "questionCount": 221
+  },
+  "expansion": {
+    "added": 237,
+    "byYear": {
+      "2025": 201,
+      "2024": 20,
+      "2026": 16
+    },
+    "pdfKeyChecked": 16,
+    "publicKeyTranscription": 221,
+    "originalPageImages": 38,
+    "originalPageBytes": 4516630,
+    "previousQuestions": 78,
+    "allDisciplinesHaveNewItems": true
   }
 }
