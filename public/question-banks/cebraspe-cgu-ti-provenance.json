@@ -1,0 +1,311 @@
+{
+  "version": "2026-10-15.1",
+  "provenance": [
+    {
+      "id": "cebraspe-inss-2022-common",
+      "title": "INSS 2022 — conhecimentos básicos: seleção para o edital CGU — Desenvolvimento de Sistemas",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "760_INSS_CB1_01",
+      "examDate": "2022-11-27",
+      "keyStatus": "final",
+      "questionNumbers": [
+        15,
+        16,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        36,
+        38,
+        40
+      ],
+      "questionCount": 16,
+      "originalUrlIdentification": "URLs oficiais identificadas no script público https://github.com/mccall9/study/blob/7b0c8585c1062b15aceb992e649741b4f334c702/scripts/extrair-prova.py; acesso direto ao CDN bloqueado pelo proxy HTTP 403. PDFs originais disponíveis no espelho público citado.",
+      "verification": "Cabeçalho CEBRASPE – INSS – Edital 2022 no caderno; código 760_INSS_CB1_01, data e GABARITOS OFICIAIS DEFINITIVOS no gabarito; número e texto de cada item conferidos por colunas.",
+      "classification": "Mapeamento editorial dos itens para os tópicos do PDF de edital CGU fornecido pelo usuário; não é classificação oficial da banca.",
+      "excluded": "Português, informática genérica de escritório, raciocínio lógico, seguridade social e itens de legislação específica do INSS não incluídos. Não foram criados comentários ou gabaritos automáticos.",
+      "proof": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/inss_22/arquivos/760_INSS_CB1_01.PDF",
+        "mirrorUrl": "https://github.com/kant-sdev/simucespe/blob/866548c384bde045f732a0249f0abed8ee98780a/prova_gabarito/cespe-cebraspe-2022-inss-tecnico-do-seguro-social-prova.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/kant-sdev/simucespe/866548c384bde045f732a0249f0abed8ee98780a/prova_gabarito/cespe-cebraspe-2022-inss-tecnico-do-seguro-social-prova.pdf",
+        "sha256": "36fd5a6a9289e15c069466592a4b9ff40c1c944900856c7cf5b427ca4d1bfa39",
+        "assetUrl": "/documents/cebraspe-inss-2022-common-proof.pdf"
+      },
+      "key": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/inss_22/arquivos/GAB_DEFINITIVO_760_INSS_CB1_01.PDF",
+        "mirrorUrl": "https://github.com/kant-sdev/simucespe/blob/866548c384bde045f732a0249f0abed8ee98780a/prova_gabarito/cespe-cebraspe-2022-inss-tecnico-do-seguro-social-gabarito.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/kant-sdev/simucespe/866548c384bde045f732a0249f0abed8ee98780a/prova_gabarito/cespe-cebraspe-2022-inss-tecnico-do-seguro-social-gabarito.pdf",
+        "sha256": "58adfd704855d181204b5fc5d1cc13182498f15027b6fb041c3442d04d5b3ee8",
+        "assetUrl": "/documents/cebraspe-inss-2022-common-key.pdf"
+      }
+    },
+    {
+      "id": "cebraspe-bacen-2024-basicos",
+      "title": "Banco Central do Brasil (BCB) 2024 — Analista — conhecimentos básicos para todos os cargos: seleção para o edital CGU — Desenvolvimento de Sistemas",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "959_BCB_CB1_01",
+      "examDate": "2024-08-04",
+      "keyStatus": "final",
+      "questionNumbers": [
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "questionCount": 5,
+      "originalUrlIdentification": "URLs oficiais registradas no inventário público https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/fontes.csv; acesso direto ao CDN bloqueado pelo proxy HTTP 403. PDFs originais disponíveis no espelho público citado.",
+      "verification": "Cabeçalho CESPE/CEBRASPE e órgão no caderno; código do caderno, data e GABARITOS OFICIAIS DEFINITIVOS no gabarito; textos extraídos por colunas e números conferidos.",
+      "classification": "Mapeamento editorial ao PDF de edital CGU fornecido pelo usuário; não é classificação oficial da banca.",
+      "excluded": "Sem itens anulados, imagens/tabelas necessárias, legislação específica do órgão fora do edital CGU ou fatos atuais dependentes da data da prova. Comentários automáticos não adicionados.",
+      "proof": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/BCB_24/arquivos/959_BCB_CB1_01.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/bacen-2024/basicos-prova.pdf",
+        "sha256": "ba25e4ed70a5a2eb021b3e25cff4138705a8de035dd03d243e8d1f980aa9e01a",
+        "assetUrl": "/documents/cebraspe-bacen-2024-basicos-proof.pdf"
+      },
+      "key": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/BCB_24/arquivos/GAB_DEFINITIVO_959_BCB_CB1_01.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/bacen-2024/basicos-gabarito.pdf",
+        "sha256": "a49786674b8bf9c615748c57940509e2f2f7a7d226271864a15ebcc6218c1141",
+        "assetUrl": "/documents/cebraspe-bacen-2024-basicos-key.pdf"
+      }
+    },
+    {
+      "id": "cebraspe-abin-2018-oficial-basicos",
+      "title": "Agência Brasileira de Inteligência (ABIN) 2018 — Oficial de Inteligência — áreas 1 a 4 (conhecimentos gerais): seleção para o edital CGU — Desenvolvimento de Sistemas",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "378_ABIN_CB1_01",
+      "examDate": "2018-03-11",
+      "keyStatus": "final",
+      "questionNumbers": [
+        24,
+        25,
+        30,
+        32,
+        36,
+        40,
+        53,
+        54
+      ],
+      "questionCount": 8,
+      "originalUrlIdentification": "URLs oficiais registradas no inventário público https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/fontes.csv; acesso direto ao CDN bloqueado pelo proxy HTTP 403. PDFs originais disponíveis no espelho público citado.",
+      "verification": "Cabeçalho CESPE/CEBRASPE e órgão no caderno; código do caderno, data e GABARITOS OFICIAIS DEFINITIVOS no gabarito; textos extraídos por colunas e números conferidos.",
+      "classification": "Mapeamento editorial ao PDF de edital CGU fornecido pelo usuário; não é classificação oficial da banca.",
+      "excluded": "Sem itens anulados, imagens/tabelas necessárias, legislação específica do órgão fora do edital CGU ou fatos atuais dependentes da data da prova. Comentários automáticos não adicionados.",
+      "proof": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/ABIN_17/arquivos/378_ABIN_CB1_01.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/abin-2018/oficial-basicos-prova.pdf",
+        "sha256": "06c7fb07bfff944fe9e5899790c38228e80e946fcd72fb718bc9cd281004a3d0",
+        "assetUrl": "/documents/cebraspe-abin-2018-oficial-basicos-proof.pdf"
+      },
+      "key": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/ABIN_17/arquivos/GAB_DEFINITIVO_378_ABIN_CB1_01.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/abin-2018/oficial-basicos-gabarito.pdf",
+        "sha256": "527bc6484df3eb484410af434363ee899d64a5c4e66905b34609d2af7dc1496a",
+        "assetUrl": "/documents/cebraspe-abin-2018-oficial-basicos-key.pdf"
+      }
+    },
+    {
+      "id": "cebraspe-abin-2018-oficial-area1",
+      "title": "Agência Brasileira de Inteligência (ABIN) 2018 — Oficial de Inteligência — área 1: seleção para o edital CGU — Desenvolvimento de Sistemas",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "378_ABIN_001_01",
+      "examDate": "2018-03-11",
+      "keyStatus": "final",
+      "questionNumbers": [
+        102
+      ],
+      "questionCount": 1,
+      "originalUrlIdentification": "URLs oficiais registradas no inventário público https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/fontes.csv; acesso direto ao CDN bloqueado pelo proxy HTTP 403. PDFs originais disponíveis no espelho público citado.",
+      "verification": "Cabeçalho CESPE/CEBRASPE e órgão no caderno; código do caderno, data e GABARITOS OFICIAIS DEFINITIVOS no gabarito; textos extraídos por colunas e números conferidos.",
+      "classification": "Mapeamento editorial ao PDF de edital CGU fornecido pelo usuário; não é classificação oficial da banca.",
+      "excluded": "Sem itens anulados, imagens/tabelas necessárias, legislação específica do órgão fora do edital CGU ou fatos atuais dependentes da data da prova. Comentários automáticos não adicionados.",
+      "proof": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/ABIN_17/arquivos/378_ABIN_001_01.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/abin-2018/oficial-area1-prova.pdf",
+        "sha256": "da432511f4be78039dc06a1fdc33b0d0a3e641406535a21c0882400e96261f80",
+        "assetUrl": "/documents/cebraspe-abin-2018-oficial-area1-proof.pdf"
+      },
+      "key": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/ABIN_17/arquivos/GAB_DEFINITIVO_378_ABIN_001_01.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/abin-2018/oficial-area1-gabarito.pdf",
+        "sha256": "300577669beaaf5755be5148a3a4526df6e2879542f1f7e725aaf37e8d359bf2",
+        "assetUrl": "/documents/cebraspe-abin-2018-oficial-area1-key.pdf"
+      }
+    },
+    {
+      "id": "cebraspe-bcb-2024-ti",
+      "title": "BCB 2024 — Tecnologia da Informação: seleção para o edital CGU — Desenvolvimento de Sistemas",
+      "consultedAt": "2026-10-15",
+      "board": "Cebraspe",
+      "examCode": "959_BCB_002_01",
+      "examDate": "2024-08-04",
+      "keyStatus": "final",
+      "questionNumbers": [
+        59,
+        60,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        94,
+        96,
+        97,
+        98,
+        99,
+        100,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "questionCount": 48,
+      "originalUrlIdentification": "URLs oficiais identificadas no manifesto público provas/fontes.csv do espelho. Acesso direto ao CDN bloqueado pelo proxy HTTP 403. Arquivos obtidos de espelho público com commit fixado; SHA-256 de todos os PDFs confere com provas/SHA256SUMS do mesmo commit.",
+      "verification": "Cabeçalho CEBRASPE – BCB – Edital: 2024 no caderno; código 959_BCB_002_01, aplicação 4/8/2024, Cargo 2 e GABARITOS OFICIAIS DEFINITIVOS no gabarito. Os 70 itens foram extraídos por coluna e suas chaves conferidas em quatro linhas Item/Gabarito do PDF; 48 selecionados. Item 118: gabarito preliminar E alterado para C, conforme justificativa oficial.",
+      "classification": "Mapeamento editorial dos itens aos tópicos do PDF de edital CGU fornecido pelo usuário; não é classificação oficial da banca. Questões 87 (concorrência expressa em Python), 89 (contraste GraphQL/REST) e 103 (protocolos HTTP) têm aderência conceitual, sem afirmar que Python ou GraphQL são tecnologias expressas no edital.",
+      "excluded": "Itens anulados 53,55,56,61,101. Excluídos também aprendizado de máquina profundo (51,52,54,57,58), MLOps (62,63), framework NIST específico (71), DLT (93), sintaxe Python len (95), migração de VMs (105), redes SDN/Windows/LAN/Linux (109–112), governança de dados e ITIL específicos (119,120) por falta de aderência direta suficiente. Não foram criados comentários ou gabaritos automáticos.",
+      "proof": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/BCB_24/arquivos/959_BCB_002_01.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/bacen-2024/ti-prova.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/SaganGromov/CONCURSOS_2627/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/bacen-2024/ti-prova.pdf",
+        "sha256": "9819ff6d24915f8ce6907daadaec4dece68a09ddb3e071f0afd7bdf9a4c200e3",
+        "assetUrl": "/documents/cebraspe-bcb-2024-ti-proof.pdf"
+      },
+      "key": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/BCB_24/arquivos/GAB_DEFINITIVO_959_BCB_002_01.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/bacen-2024/ti-gabarito.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/SaganGromov/CONCURSOS_2627/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/bacen-2024/ti-gabarito.pdf",
+        "sha256": "e8178c0403b9c4c8772a54755d94dd32492f207528211380101e6d0cdf37b736",
+        "assetUrl": "/documents/cebraspe-bcb-2024-ti-key.pdf"
+      },
+      "keyChanges": {
+        "originalUrl": "https://cdn.cebraspe.org.br/concursos/BCB_24/arquivos/BCB_24_JUSTIFICATIVAS_DE_ALTERAES_DE_GABARITO.PDF",
+        "mirrorUrl": "https://github.com/SaganGromov/CONCURSOS_2627/blob/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/bacen-2024/justificativas-gabarito.pdf",
+        "rawMirrorUrl": "https://raw.githubusercontent.com/SaganGromov/CONCURSOS_2627/06dab825dfc56ca75d1fefb3bc954e8ef5e00f09/provas/originais/bacen-2024/justificativas-gabarito.pdf",
+        "sha256": "8fa05363d412a68021d8c2c4a2360c29921edc19ee8a5c8ccb29f18eee16277b",
+        "assetUrl": "/documents/cebraspe-bcb-2024-ti-keyChanges.pdf"
+      }
+    }
+  ],
+  "coverage": {
+    "basis": "Contagem de itens selecionados nesta base. Não representa incidência histórica na banca nem domínio do candidato.",
+    "disciplineCount": 13,
+    "coveredDisciplines": 11,
+    "topicCount": 205,
+    "coveredTopics": 39,
+    "byBlock": {
+      "p1": 21,
+      "p2": 10,
+      "p3": 47
+    },
+    "byDiscipline": [
+      {
+        "discipline": "ESTADO, DEMOCRACIA, DIREITOS E CIÊNCIA POLÍTICA",
+        "questions": 9
+      },
+      {
+        "discipline": "SOCIEDADE BRASILEIRA, DESIGUALDADES, DIVERSIDADE E DESENVOLVIMENTO",
+        "questions": 1
+      },
+      {
+        "discipline": "ÉTICA PÚBLICA E RESPONSABILIDADE PROFISSIONAL",
+        "questions": 4
+      },
+      {
+        "discipline": "ADMINISTRAÇÃO PÚBLICA E FUNDAMENTOS DE POLÍTICAS PÚBLICAS",
+        "questions": 7
+      },
+      {
+        "discipline": "FUNDAMENTOS DE GOVERNANÇA, RISCOS E INTEGRIDADE PÚBLICA E PRIVADA",
+        "questions": 0
+      },
+      {
+        "discipline": "FUNDAMENTOS DE TRANSPARÊNCIA, OUVIDORIA E PARTICIPAÇÃO SOCIAL",
+        "questions": 3
+      },
+      {
+        "discipline": "FUNDAMENTOS DE DIREITO PÚBLICO APLICADO, CONTROLE E RESPONSABILIZAÇÃO",
+        "questions": 6
+      },
+      {
+        "discipline": "FUNDAMENTOS DE EVIDÊNCIAS, DADOS E INTELIGÊNCIA ARTIFICIAL",
+        "questions": 1
+      },
+      {
+        "discipline": "FUNDAMENTOS DE AUDITORIA GOVERNAMENTAL E ATUAÇÃO INTEGRADA DA CGU",
+        "questions": 0
+      },
+      {
+        "discipline": "ENGENHARIA DE SOFTWARE E PROGRAMAÇÃO",
+        "questions": 5
+      },
+      {
+        "discipline": "ARQUITETURA E INTEGRAÇÃO DE SISTEMAS",
+        "questions": 28
+      },
+      {
+        "discipline": "PERSISTÊNCIA, INTEGRAÇÃO E PROTEÇÃO DE DADOS",
+        "questions": 4
+      },
+      {
+        "discipline": "DESENVOLVIMENTO SEGURO, QUALIDADE E GESTÃO DA ENTREGA",
+        "questions": 10
+      }
+    ],
+    "byExam": {
+      "CEBRASPE-INSS-2022-760_INSS_CB1_01": 16,
+      "CEBRASPE-959_BCB_CB1_01": 5,
+      "CEBRASPE-378_ABIN_CB1_01": 8,
+      "CEBRASPE-378_ABIN_001_01": 1,
+      "CEBRASPE-BCB-2024-959_BCB_002_01": 48
+    },
+    "missingDisciplines": [
+      "FUNDAMENTOS DE GOVERNANÇA, RISCOS E INTEGRIDADE PÚBLICA E PRIVADA",
+      "FUNDAMENTOS DE AUDITORIA GOVERNAMENTAL E ATUAÇÃO INTEGRADA DA CGU"
+    ]
+  }
+}

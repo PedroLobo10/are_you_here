@@ -26,13 +26,30 @@ O teste de navegador usa Chromium em `/usr/bin/chromium`; `CHROMIUM_PATH` pode a
 ## Começar a estudar
 
 1. Consulte **Edital → Fontes e documentos**. O PDF fornecido está incluído e pode ser aberto integralmente. Confira novas retificações antes de atualizar as regras.
-2. Em **Questões**, importe questões de provas anteriores do Cebraspe/Cespe por CSV/JSON, ou confira um PDF e vincule manualmente cada número de item ao gabarito. Há modelos vazios e instruções para download. Fonte pública e confirmação da prévia são obrigatórias; o aplicativo não autentica automaticamente a origem do arquivo.
-3. Informe o bloco (`p1`, `p2` ou `p3`) e vincule o `topicId` ao edital. O campo de vínculo também aparece no cadastro manual.
+2. Em **Questões**, filtre e selecione os itens da base oficial já incluída. Para consultar sua origem ou baixar o arquivo de importação, abra **Consultar fontes do pacote oficial → Baixar pacote JSON**. A consulta fica indisponível durante sessões com correção adiada, para preservar o sigilo das respostas.
+3. Para ampliar a base, importe questões de provas anteriores do Cebraspe/Cespe por CSV/JSON, ou confira um PDF e vincule manualmente cada número de item ao gabarito. Há modelos vazios e instruções para download. Informe o bloco (`p1`, `p2` ou `p3`) e vincule o `topicId` ao edital, também disponível no cadastro manual. Fonte pública e confirmação da prévia são obrigatórias; o aplicativo não autentica automaticamente a origem de novos arquivos.
 4. Clique **Começar meu estudo de hoje**. O diagnóstico procura questões nunca apresentadas e distribui a amostra por disciplina. Se só houver itens já vistos, o plano informa a repetição; importe inéditas para uma nova linha de base.
 5. Registre Certo, Errado ou branco e a confiança antes de responder. Termine a sessão para consolidar suas métricas e agendar erros, acertos inseguros e itens marcados.
 6. Classifique os erros, registre o conceito correto e reveja nas datas agendadas. Intervalos iniciais são configuráveis. Utilize **Configurações → Exportar backup completo** regularmente.
 
-Sem questões oficiais importadas, o banco real começa vazio. Os seis exemplos autorais do modo demonstração mostram o funcionamento e não são questões oficiais, nem resultados de Pedro. Estratégia inclui exemplos didáticos autorais fora do banco real.
+A base oficial é adicionada automaticamente em instalações novas e existentes, preservando questões já cadastradas, favoritos, anotações, gabaritos retificados e histórico. Disponibilizar questões não registra tentativas nem cria resultados de estudo. Os seis exemplos autorais do modo demonstração permanecem separados e não são questões oficiais, nem resultados de Pedro. Estratégia inclui exemplos didáticos autorais fora do banco real.
+
+## Base oficial incluída
+
+São **78 questões de provas anteriores do Cebraspe/Cespe**, selecionadas por aderência ao conteúdo do edital fornecido para CGU — Desenvolvimento de Sistemas. A origem de cada questão identifica o órgão e a prova; estes itens não são apresentados como questões de uma prova da CGU.
+
+| Prova de origem | Questões selecionadas |
+|---|---:|
+| INSS 2022 — conhecimentos básicos | 16 |
+| Banco Central 2024 — conhecimentos básicos | 5 |
+| ABIN 2018 — conhecimentos gerais e área 1 | 9 |
+| Banco Central 2024 — Tecnologia da Informação | 48 |
+
+A seleção cobre **11 das 13 disciplinas e 39 dos 205 tópicos folha**. Essa é a cobertura do banco disponível, não o domínio do candidato. Ainda faltam questões verificadas para **Fundamentos de Governança, Riscos e Integridade Pública e Privada** e **Fundamentos de Auditoria Governamental e Atuação Integrada da CGU**; há também tópicos sem questões nas disciplinas contempladas. A classificação dos itens no edital CGU é editorial, não uma classificação oficial da banca.
+
+Enunciados, números de item e gabaritos oficiais definitivos foram conferidos em PDFs originais preservados em espelhos públicos dos repositórios `kant-sdev/simucespe` e `SaganGromov/CONCURSOS_2627`. **O acesso direto ao CDN oficial do Cebraspe retornou HTTP 403**; a conferência documental das cópias públicas não confirma sua disponibilidade online atual. Os PDFs de prova, gabarito e justificativas aplicáveis estão incluídos em `public/documents/`. URLs originais, espelhos em commits identificados, data de consulta e hashes SHA-256 estão em `public/question-banks/cebraspe-cgu-ti-provenance.json`; o pacote importável está em `public/question-banks/cebraspe-cgu-ti-v1.json` e pode ser baixado em **Questões**.
+
+Nenhuma base privada ou questão autoral integra esse pacote. Comentários didáticos não validados continuam identificados separadamente do gabarito oficial.
 
 ## Fonte e regras
 

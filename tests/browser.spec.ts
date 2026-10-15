@@ -12,7 +12,7 @@ const fixtures = [
 ].map((q,i)=>({...q,board:'Cebraspe',organization:'Fixture sintética',role:'Teste automatizado',year:2025,block:'general',origin:'official',source:'Fixture sintética de teste, nunca base de estudo real',sourceUrl:'https://example.org/test-fixture-only.json',itemNumber:String(i+1),keyStatus:'final'}));
 
 async function persisted(page:Page){return page.evaluate(()=>JSON.parse(localStorage.getItem('prumo.study.v1')||'{}'));}
-async function nav(page:Page,label:string){await page.getByRole('navigation',{name:'Navegação principal'}).getByRole('button',{name:label,exact:true}).click();}
+async function nav(page:Page,label:string){const menu=page.getByRole('button',{name:'Abrir menu',exact:true});if(await menu.isVisible()&&!await page.locator('.sidebar-open').count())await menu.click();await page.getByRole('navigation',{name:'Navegação principal'}).getByRole('button',{name:label,exact:true}).click();}
 async function importFixtures(page:Page){
   const block=await page.evaluate(async()=>{const modulePath='/src/storage.ts';return (await import(modulePath)).loadState().state.rules.blocks[0].id;});
   await nav(page,'Questões');await page.getByRole('button',{name:'Importar questões',exact:true}).click();
@@ -20,8 +20,9 @@ async function importFixtures(page:Page){
   await expect(page.getByRole('heading',{name:'Prévia: 3 item(ns) válido(s)'})).toBeVisible();
   await page.getByRole('checkbox',{name:/Conferi os enunciados/}).check();
   await page.getByRole('button',{name:'Importar 3 item(ns) no banco real'}).click();
-  await expect(page.locator('.question-card')).toHaveCount(3);
   await page.getByRole('button',{name:'Fechar importação'}).click();
+  await page.getByLabel('Pesquisar no banco').fill('FIXTURE DE TESTE');
+  await expect(page.locator('.question-card')).toHaveCount(3);
 }
 async function answer(page:Page,index:number,confidenceIndex=4){
   await page.locator('.answer-options button').nth(index).click();
@@ -54,11 +55,12 @@ test('import → resolution → reload → metrics → review → changed key �
   await answer(page,1);await page.getByRole('button',{name:'Concluir e corrigir sessão'}).click();
   s=await persisted(page);expect(s.reviews.some((r:any)=>!!r.completedAt)).toBe(true);expect(s.sessions).toHaveLength(2);
   await page.getByRole('button',{name:'Voltar ao plano'}).click();await nav(page,'Questões');
+  await page.getByLabel('Pesquisar no banco').fill('FIXTURE DE TESTE');
   await page.locator('.question-card').nth(1).getByRole('button',{name:'Fonte e histórico'}).click();
   await page.getByRole('button',{name:'Registrar retificação de gabarito'}).click();await page.locator('.key-editor').getByLabel('Resposta').selectOption('C');await page.locator('.key-editor').getByLabel('Situação').selectOption('changed');await page.getByLabel('Fonte / URL verificável da retificação').fill('https://example.org/changed-test-fixture-only');await page.getByRole('button',{name:'Salvar nova versão'}).click();
-  s=await persisted(page);expect(s.questions.find((q:any)=>!q.isDemo&&q.itemNumber==='2').keyVersion).toBe(2);expect(s.sessions[0].attempts[1].keyVersionAtAnswer).toBe(1);expect(s.sessions[0].attempts[1].answer).toBe('C');
+  s=await persisted(page);expect(s.questions.find((q:any)=>q.sourceUrl==='https://example.org/test-fixture-only.json'&&q.itemNumber==='2').keyVersion).toBe(2);expect(s.sessions[0].attempts[1].keyVersionAtAnswer).toBe(1);expect(s.sessions[0].attempts[1].answer).toBe('C');
   await page.locator('.filter-row select').nth(2).selectOption('wrong');await expect(page.locator('.question-card')).toHaveCount(1); // review answer E became wrong after key C.
-  await page.getByRole('button',{name:'Limpar filtros'}).click();await expect(page.locator('.question-card')).toHaveCount(3);
+  await page.getByRole('button',{name:'Limpar filtros'}).click();await page.getByLabel('Pesquisar no banco').fill('FIXTURE DE TESTE');await expect(page.locator('.question-card')).toHaveCount(3);
   const download=page.waitForEvent('download');await page.getByRole('button',{name:'Exportar resultado JSON'}).click();expect((await download).suggestedFilename()).toBe('questoes-reais.json');
   await nav(page,'Estatísticas');await expect(page.locator('body')).toContainText('Precisão');
   expect(errors).toEqual([]);
@@ -80,7 +82,7 @@ test('simulation timeout preserves draft, never invents unseen blanks',async({pa
     const s=JSON.parse(localStorage.getItem('prumo.study.v1')!);
     const corePath='/src/core.ts';const core=await import(corePath);
     s.rules.durationMinutes=0.05;
-    s.sessions.push(core.createSession(s,'simulation',s.questions.filter((q:any)=>!q.isDemo).map((q:any)=>q.id)));
+    s.sessions.push(core.createSession(s,'simulation',s.questions.filter((q:any)=>q.sourceUrl==='https://example.org/test-fixture-only.json').map((q:any)=>q.id)));
     localStorage.setItem('prumo.study.v1',JSON.stringify(s));
   });
   await page.reload();await nav(page,'Hoje');await page.getByRole('button',{name:'Retomar minha sessão'}).click();
@@ -122,4 +124,78 @@ test('CSV quoting and imported commentary preserve provenance without AI validat
     return {rows:rows.length,statement:rows[0].statement,ai:ai.question?.explanation,answer:ai.question?.answer,otherBoardBlocked:!!otherBoard.error,authoralBlocked:!!authoral.error,malformed};
   });
   expect(result.rows).toBe(1);expect(result.statement).toBe('Linha 1, com vírgula\nLinha 2 "aspas"');expect(result.ai.author).toBe('ai');expect(result.ai.validated).toBe(false);expect(result.ai.steps).toEqual(['Passo de teste.']);expect(result.answer).toBe('C');expect(result.otherBoardBlocked).toBe(true);expect(result.authoralBlocked).toBe(true);expect(result.malformed).toBe(true);
+});
+
+test('bundled official bank survives an older installation without fabricated study results',async({page})=>{
+  await page.goto('http://localhost:5173');
+  await expect(page.getByRole('heading',{name:/Pedro/})).toBeVisible();
+  const initial=await page.evaluate(async()=>{const path='/src/storage.ts';return(await import(path)).loadState().state;});
+  expect(initial.questions.filter((q:any)=>!q.isDemo)).toHaveLength(78);
+  expect(initial.sessions).toHaveLength(0);
+  // Simulate an earlier installation containing one real item with a favorite.
+  await page.evaluate((s)=>{
+    const kept=s.questions.find((q:any)=>!q.isDemo);kept.favorite=true;
+    s.profile.name='Pedro Lobo';s.questions=s.questions.filter((q:any)=>q.isDemo||q.id===kept.id);
+    s.sources=s.sources.filter((source:any)=>!source.questionBankDocumentKind);
+    localStorage.setItem('prumo.study.v1',JSON.stringify(s));
+  },initial);
+  await page.reload();await nav(page,'Questões');
+  await expect(page.getByText('78 questões no banco real.',{exact:true})).toBeVisible();
+  const migrated=await persisted(page);
+  expect(migrated.questions.filter((q:any)=>!q.isDemo)).toHaveLength(78);
+  expect(migrated.questions.find((q:any)=>!q.isDemo).favorite).toBe(true);
+  expect(migrated.sessions).toHaveLength(0);expect(migrated.reviews).toHaveLength(0);
+  await page.getByRole('button',{name:'Consultar fontes do pacote oficial'}).click();
+  await expect(page.getByText('39 de 205 tópicos',{exact:true})).toBeVisible();
+  await expect(page.getByText('11 de 13 disciplinas',{exact:true})).toBeVisible();
+  await expect(page.getByText(/As 78 questões deste pacote já estão presentes/)).toBeVisible();
+  await page.getByText('Conferir provas, fontes e gabaritos',{exact:true}).click();
+  expect(await page.getByRole('link',{name:'Abrir cópia PDF conferida',exact:true}).count()).toBe(11);
+  const pdf=await page.request.get(await page.getByRole('link',{name:'Abrir cópia PDF conferida',exact:true}).first().getAttribute('href')||'');
+  expect(pdf.ok()).toBe(true);expect((await pdf.body()).subarray(0,5).toString()).toBe('%PDF-');
+  const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Baixar pacote JSON'}).click();
+  const downloaded=JSON.parse((await readFile((await(await downloadPromise).path())!)).toString());
+  expect(downloaded.questions).toHaveLength(78);expect(downloaded.questions.every((q:any)=>q.origin==='official'&&!q.isDemo)).toBe(true);
+});
+
+test('official Java item preserves code and assertion on mobile, scores and schedules review',async({page})=>{
+  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.setViewportSize({width:390,height:844});await page.goto('http://localhost:5173');await nav(page,'Questões');
+  await page.getByLabel('Pesquisar no banco').fill('System.out.println');
+  await expect(page.locator('.question-card')).toHaveCount(1);
+  const text=await page.locator('.question-card .question-statement-body').innerText();
+  expect(text.indexOf('public class Main')).toBeLessThan(text.indexOf('Ao ser executado'));
+  expect(text.trim().endsWith('6')).toBe(true);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.locator('.question-card').getByRole('button',{name:'Resolver',exact:true}).click();
+  await expect(page.locator('.runner-question-card pre')).toHaveCount(2);
+  await expect(page.locator('.runner-feedback')).toHaveCount(0);
+  await answer(page,0);await expect(page.locator('.runner-feedback')).toContainText('Errado');
+  await page.getByRole('button',{name:'Concluir e corrigir sessão'}).click();
+  const s=await persisted(page);expect(s.sessions).toHaveLength(1);expect(s.sessions[0].questionIds).toEqual(['cebraspe-bcb-2024-002-094']);
+  expect(s.reviews.some((r:any)=>r.questionId==='cebraspe-bcb-2024-002-094')).toBe(true);
+  const stats=await page.evaluate(async()=>{const modulePath='/src/core.ts';return(await import(modulePath)).calculateStats(JSON.parse(localStorage.getItem('prumo.study.v1')!));});
+  expect(stats.attempts).toBe(1);expect(stats.unique).toBe(1);expect(stats.wrong).toBe(1);expect(stats.net).toBe(-2);expect(stats.netRate).toBe(-1);
+  await page.reload();const reloaded=await persisted(page);expect(reloaded.sessions[0].attempts).toHaveLength(1);expect(reloaded.questions.filter((q:any)=>!q.isDemo)).toHaveLength(78);
+  expect(errors).toEqual([]);
+});
+
+test('official battery exposes only the linked PDF page and withholds bank keys until completion',async({page})=>{
+  await page.goto('http://localhost:5173');await nav(page,'Questões');await page.getByLabel('Pesquisar no banco').fill('System.out.println');
+  await page.locator('.study-toolbar select').selectOption('battery');
+  await page.locator('.question-card').getByRole('button',{name:'Resolver',exact:true}).click();
+  const original=page.locator('.session-runner .original-document');await original.locator('summary').click();
+  await expect(original.locator('img')).toBeVisible({timeout:20000});
+  expect(await original.locator('a,iframe').count()).toBe(0);
+  await nav(page,'Questões');await expect(page.getByRole('button',{name:'Consultar fontes do pacote oficial'})).toBeDisabled();
+  await expect(page.getByRole('button',{name:'Exportar resultado JSON'})).toBeDisabled();
+  await nav(page,'Edital verticalizado');await page.getByRole('tab',{name:'Fontes e documentos'}).click();
+  expect(await page.locator('.source-row').filter({hasText:'Gabarito definitivo'}).count()).toBe(0);
+  await nav(page,'Hoje');await page.getByRole('button',{name:'Retomar minha sessão'}).click();
+  await page.locator('.answer-options button').nth(1).click();await page.locator('.confidence-option').nth(3).click();
+  await page.getByRole('button',{name:/Salvar resposta/}).click();
+  await page.getByRole('button',{name:'Concluir e corrigir sessão'}).click();
+  await expect(page.getByRole('heading',{name:'Sua sessão, em perspectiva'})).toBeVisible();
+  await page.getByRole('button',{name:'Voltar ao plano'}).click();await nav(page,'Questões');
+  await expect(page.getByRole('button',{name:'Consultar fontes do pacote oficial'})).toBeEnabled();
 });

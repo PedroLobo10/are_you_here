@@ -1,5 +1,9 @@
 import type { ExamRules, Question, SourceRecord, Topic } from './types';
 import extraction from './edital-extraction.json';
+import bundledQuestions from './data/cebraspe-cgu-ti-v1.json';
+import type { QuestionBank } from './question-bank';
+
+export const officialQuestionBank = bundledQuestions as unknown as QuestionBank;
 
 const officialUrl = 'https://www.cebraspe.org.br/concursos/cgu_26_affc';
 const consultedAt = '2026-10-14';
@@ -21,7 +25,7 @@ export const sourceRecords: SourceRecord[] = [{
   fileName: 'edital-cgu-affc-2026.pdf',
   extractedText: extraction.extractedText,
   detail: 'Conteúdo conferido no PDF fornecido pelo usuário (69 páginas; SHA-256 d4ccc50d4fdff5345ce197658eb60ba0afa85bc841d9aef1b265900c71653985). Especialidade no item 2.1.4; estrutura e duração no item 7; pontuação e mínimos em 8.11; anulados em 8.12.6.1; discursivas no item 9; conteúdo em 15.2.2, 15.2.3 e Cargo 4 de 15.2.4; cronograma previsto no Anexo I. Autenticidade da publicação, vigência e retificações permanecem NÃO CONFIRMADAS ONLINE. Datas são previstas e podem ser alteradas.',
-}];
+}, ...(officialQuestionBank.sources ?? [])];
 
 export const initialRules: ExamRules = {
   version: 'Edital nº 1 – CGU – AFFC – 08/10/2026 · PDF fornecido',
@@ -96,4 +100,5 @@ export const initialQuestions: Question[] = [
   makeDemo('demo-python-range', 'O trecho Python apresentado imprime o valor 6.', 'C', 'Programação · exemplo', 'Laços e acumulação', 'range(4) produz 0, 1, 2 e 3; sua soma é 6.', ['O acumulador começa em 0.', 'Os valores visitados são 0, 1, 2 e 3; o limite 4 não é incluído.', 'Após as somas, total vale 6.'], 'Python — The range type: https://docs.python.org/3/library/stdtypes.html#ranges', { code: 'total = 0\nfor i in range(4):\n    total += i\nprint(total)', language: 'python' }),
   makeDemo('demo-sql-count', 'Em SQL, COUNT(coluna) contabiliza os valores não nulos da coluna no conjunto de linhas considerado.', 'C', 'Banco de dados · exemplo', 'Funções de agregação', 'COUNT(coluna) conta as entradas não nulas. COUNT(*) conta linhas, inclusive aquelas cuja coluna seja nula.', ['Considere os valores 10, NULL e 20.', 'COUNT(coluna) retorna 2.', 'COUNT(*) sobre essas três linhas retorna 3.'], 'PostgreSQL — Aggregate Functions: https://www.postgresql.org/docs/current/functions-aggregate.html'),
   makeDemo('demo-http-idempotent', 'Um método HTTP idempotente exige que todas as respostas a requisições repetidas sejam idênticas, inclusive o código de status.', 'E', 'Desenvolvimento de sistemas · exemplo', 'Idempotência HTTP', 'Idempotência se refere ao efeito pretendido sobre o servidor. As respostas podem diferir entre repetições.', ['A primeira requisição DELETE pode remover um recurso.', 'Uma segunda DELETE pode encontrar o recurso já ausente.', 'O estado final pretendido é o mesmo, ainda que o status retornado mude.'], 'RFC 9110, seção 9.2.2 — Idempotent Methods: https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2.2'),
+  ...officialQuestionBank.questions,
 ];
