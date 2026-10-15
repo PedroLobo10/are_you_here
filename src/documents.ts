@@ -1,0 +1,16 @@
+const DB_NAME='prumo-documents-v1';
+export interface StoredDocument {id:string;name:string;type:string;blob:Blob;}
+async function database():Promise<IDBDatabase> {
+  return new Promise((resolve,reject)=>{const r=indexedDB.open(DB_NAME,1);r.onupgradeneeded=()=>r.result.createObjectStore('documents',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(new Error('Não foi possível abrir o armazenamento de PDFs.'));});
+}
+async function operation<T>(mode:IDBTransactionMode,call:(store:IDBObjectStore)=>IDBRequest<T>):Promise<T> {
+  const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction('documents',mode);const req=call(tx.objectStore('documents'));let result:T;req.onsuccess=()=>{result=req.result;};tx.oncomplete=()=>{db.close();resolve(result);};tx.onerror=()=>{db.close();reject(new Error('Não foi possível salvar ou carregar o PDF.'));};tx.onabort=()=>{db.close();reject(new Error('Operação de PDF interrompida.'));};});
+}
+export async function saveDocument(file:File):Promise<string> {if(file.size>25*1024*1024)throw new Error('PDF maior que 25 MB. Divida o arquivo antes de importar.');if(!(await file.slice(0,1024).text()).includes('%PDF-'))throw new Error('O arquivo não contém uma assinatura PDF válida.');const id=crypto.randomUUID();await operation('readwrite',s=>s.put({id,name:file.name,type:'application/pdf',blob:new Blob([file],{type:'application/pdf'})}));return id;}
+export async function getDocument(id:string):Promise<StoredDocument|undefined> {return operation('readonly',s=>s.get(id));}
+export async function allDocuments():Promise<StoredDocument[]> {return operation('readonly',s=>s.getAll());}
+export async function clearDocuments():Promise<void> {await operation('readwrite',s=>s.clear());}
+export interface BackupDocument {id:string;name:string;type:string;base64:string;}
+export async function serializeDocument(d:StoredDocument):Promise<BackupDocument> {if(d.type!=='application/pdf'||!(await d.blob.slice(0,1024).text()).includes('%PDF-'))throw new Error('Um documento não passou na verificação PDF para o backup.');return new Promise<BackupDocument>((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve({id:d.id,name:d.name,type:d.type,base64:String(reader.result).split(',')[1]});reader.onerror=()=>reject(new Error('Erro ao exportar PDF'));reader.readAsDataURL(d.blob);});}
+export async function exportDocuments():Promise<BackupDocument[]> {return Promise.all((await allDocuments()).map(serializeDocument));}
+export async function restoreDocuments(docs:BackupDocument[]):Promise<void> {const validated:StoredDocument[]=[];const ids=new Set<string>();for(const d of docs){if(!d||typeof d.id!=='string'||ids.has(d.id)||typeof d.name!=='string'||d.type!=='application/pdf'||typeof d.base64!=='string'||d.base64.length>36*1024*1024)throw new Error('PDF inválido no backup.');ids.add(d.id);const bytes=Uint8Array.from(atob(d.base64),c=>c.charCodeAt(0));if(!new TextDecoder().decode(bytes.slice(0,1024)).includes('%PDF-'))throw new Error('Documento do backup não é um PDF válido.');validated.push({id:d.id,name:d.name,type:'application/pdf',blob:new Blob([bytes],{type:'application/pdf'})});}await operation('readwrite',s=>{s.clear();for(const doc of validated)s.put(doc);return s.count();});}
